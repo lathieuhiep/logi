@@ -305,10 +305,10 @@ Redux::setSection( $logi_opt_name, array(
             'id'        =>  'logi_information_show_hide',
             'type'      =>  'select',
             'title'     =>  esc_html__( 'Show Or Hide Information', 'logi' ),
-            'default'   =>  1,
+            'default'   =>  0,
             'options'   =>  array(
+                0   =>  esc_html__( 'Hide', 'logi' ),
                 1   =>  esc_html__( 'Show', 'logi' ),
-                0   =>  esc_html__( 'Hide', 'logi' )
             )
         ),
 
