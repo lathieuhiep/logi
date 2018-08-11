@@ -33,7 +33,7 @@ function logi_create_products() {
         'show_ui'            => true,
         'show_in_menu'       => true,
         'query_var'          => true,
-        'menu_icon'          => 'dashicons-products',
+        'menu_icon'          => 'dashicons-cart',
         'rewrite'            => array('slug' => 'product' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
@@ -45,7 +45,7 @@ function logi_create_products() {
     register_post_type('product', $args );
     /* End post type template */
 
-    /* Start taxonomy template */
+    /* Start taxonomy prodcut */
     $taxonomy_labels = array(
 
         'name'              => _x( 'Products categories', 'taxonomy general name', 'logi' ),
@@ -75,7 +75,39 @@ function logi_create_products() {
     );
 
     register_taxonomy( 'product_cat', array( 'product' ), $taxonomy_args );
-    /* End taxonomy template */
+    /* End taxonomy prodcut */
+
+    /* Start taxonomy brand */
+    $taxonomy_labels = array(
+
+        'name'              => _x( 'Brands categories', 'taxonomy general name', 'logi' ),
+        'singular_name'     => _x( 'Brands category', 'taxonomy singular name', 'logi' ),
+        'search_items'      => __( 'Search template category', 'logi' ),
+        'all_items'         => __( 'All Category', 'logi' ),
+        'parent_item'       => __( 'Parent category', 'logi' ),
+        'parent_item_colon' => __( 'Parent category:', 'logi' ),
+        'edit_item'         => __( 'Edit category', 'logi' ),
+        'update_item'       => __( 'Update category', 'logi' ),
+        'add_new_item'      => __( 'Add New category', 'logi' ),
+        'new_item_name'     => __( 'New category Name', 'logi' ),
+        'menu_name'         => __( 'Brands', 'logi' ),
+
+    );
+
+    $taxonomy_args = array(
+
+        'labels'            => $taxonomy_labels,
+        'hierarchical'      => true,
+        'public'            => true,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'brand-category' ),
+
+    );
+
+    register_taxonomy( 'brand_cat', array( 'product' ), $taxonomy_args );
+    /* End taxonomy brand */
 
     /* Start tag template */
     $taxonomy_tag_labels = array(

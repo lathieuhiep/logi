@@ -372,12 +372,12 @@ if ( ! function_exists( 'logi_fonts_url' ) ) :
             $logi_font_families = array();
 
             if ( 'off' !== $logi_font_google ) {
-                $logi_font_families[] = 'Roboto:400,700';
+                $logi_font_families[] = 'Noto Serif:400,700';
             }
 
             $logi_query_args = array(
                 'family' => urlencode( implode( '|', $logi_font_families ) ),
-                'subset' => urlencode( 'latin' ),
+                'subset' => urlencode( 'vietnamese' ),
             );
 
             $logi_fonts_url = add_query_arg( $logi_query_args, 'https://fonts.googleapis.com/css' );
