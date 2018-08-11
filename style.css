@@ -15,6 +15,7 @@
 *
 # General
 # Header
+# Banner
 # Page
 # Sidebar
 # Blog
@@ -742,6 +743,27 @@ form.post-password-form p input[type='submit'] {
 
 .icon_menu_item_mobile.icon_menu_item_mobile_active:after {
   content: "\f147";
+}
+
+/**
+# Banner
+-----------------------------------------------------------------------------*/
+.site-banner {
+  position: relative;
+}
+
+.site-banner:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.site-banner img {
+  width: 100%;
 }
 
 /**

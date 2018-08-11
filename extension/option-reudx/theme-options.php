@@ -201,7 +201,7 @@ Redux::setSection( $logi_opt_name, array(
     )
 ));
 
-//Loading config
+// Loading config
 Redux::setSection( $logi_opt_name, array(
     'title'         =>  esc_html__( 'Loading config', 'logi' ),
     'id'            =>  'logi_general_loading',
@@ -226,7 +226,7 @@ Redux::setSection( $logi_opt_name, array(
     )
 ));
 
-//Background Options
+// Background Options
 Redux::setSection( $logi_opt_name, array(
     'title'             =>  esc_html__( 'Background', 'logi' ),
     'id'                =>  'logi_background',
@@ -246,6 +246,35 @@ Redux::setSection( $logi_opt_name, array(
             )
         ),
     ),
+));
+
+// Banner config
+Redux::setSection( $logi_opt_name, array(
+    'title'         =>  esc_html__( 'Banner', 'logi' ),
+    'id'            =>  'logi_banner_config',
+    'subsection'    =>  true,
+    'fields'        =>  array(
+
+        array(
+            'id'        =>  'logi_banner_blog_upload',
+            'type'      =>  'media',
+            'url'       =>  true,
+            'title'     =>  esc_html__( 'Banner Blog', 'logi' ),
+            'subtitle'  =>  esc_html__( 'Banne For Blog', 'logi' ),
+            'desc'      =>  esc_html__( '', 'logi' ),
+            'default'   =>  false,
+        ),
+
+        array(
+            'id'        =>  'logi_banner_product_upload',
+            'type'      =>  'media',
+            'url'       =>  true,
+            'title'     =>  esc_html__( 'Banner Product', 'logi' ),
+            'subtitle'  =>  esc_html__( 'Banne For Product', 'logi' ),
+            'desc'      =>  esc_html__( '', 'logi' ),
+            'default'   =>  false,
+        ),
+    )
 ));
 
 /* End General Options */
