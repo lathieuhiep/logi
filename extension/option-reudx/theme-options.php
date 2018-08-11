@@ -517,7 +517,7 @@ Redux::setSection( $logi_opt_name, array(
             'min'           =>  1,
             'step'          =>  1,
             'max'           =>  250,
-            'default'       =>  12,
+            'default'       =>  6,
             'display_value' => 'text'
         ),
 

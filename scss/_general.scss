@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url('fonts/ProximaNova-Regular.eot');
+  src: url('fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+  url('fonts/ProximaNova-Regular.woff2') format('woff2'),
+  url('fonts/ProximaNova-Regular.woff') format('woff'),
+  url('fonts/ProximaNova-Regular.ttf') format('truetype'),
+  url('fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   outline: none !important;
 }
@@ -8,7 +19,7 @@ body {
   min-height: 100vh;
   line-height: 1.8em;
   overflow-x: hidden;
-  font-size: 14px;
+  font-size: 13px;
   color: $color-primary;
   font-family: $font-family-text;
   font-weight: $font-weight-regular;
@@ -45,6 +56,9 @@ p {
 img {
   max-width: 100%;
   height: auto;
+}
+figure {
+  margin: 0;
 }
 iframe {
   max-width: 100%;

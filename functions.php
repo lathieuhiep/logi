@@ -206,7 +206,7 @@ function logi_register_front_end() {
     /* End Font Awesome */
 
     /* Start Font */
-    wp_enqueue_style( 'logi-fonts', logi_fonts_url(), array(), null );
+//    wp_enqueue_style( 'logi-fonts', logi_fonts_url(), array(), null );
     /* End Font */
 
     /* Start Carousel Css */
@@ -372,7 +372,7 @@ if ( ! function_exists( 'logi_fonts_url' ) ) :
             $logi_font_families = array();
 
             if ( 'off' !== $logi_font_google ) {
-                $logi_font_families[] = 'Noto Serif:400,700';
+                $logi_font_families[] = 'Oswald:400,700';
             }
 
             $logi_query_args = array(
@@ -576,8 +576,8 @@ function logi_pagination() {
     the_posts_pagination( array(
         'type' => 'list',
         'mid_size' => 2,
-        'prev_text' => esc_html__( 'Previous', 'logi' ),
-        'next_text' => esc_html__( 'Next', 'logi' ),
+        'prev_text' => '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+        'next_text' => '<i class="fa fa-angle-right" aria-hidden="true"></i>',
         'screen_reader_text' => esc_html__( '&nbsp;', 'logi' ),
     ) );
 
@@ -625,3 +625,25 @@ function logi_sanitize_pagination( $logi_content ) {
 }
 
 add_action('navigation_markup_template', 'logi_sanitize_pagination');
+
+/* Posts per page taxonomy */
+$logi_option_posts_per_page = get_option( 'posts_per_page' );
+add_action( 'init', 'logi_posts_per_page_taxonomy', 0);
+
+function logi_posts_per_page_taxonomy() {
+    add_filter( 'option_posts_per_page', 'logi_option_posts_per_page_taxonomy' );
+}
+
+function logi_option_posts_per_page_taxonomy() {
+
+    global $logi_option_posts_per_page, $logi_options;
+
+    $logi_product_limit = $logi_options['logi_product_limit'];
+
+    if ( is_tax( 'product_cat') ) :
+        return $logi_product_limit;
+    else :
+        return $logi_option_posts_per_page;
+    endif;
+
+}
