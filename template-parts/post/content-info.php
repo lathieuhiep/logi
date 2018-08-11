@@ -71,7 +71,7 @@ $logi_on_off_share_single = $logi_options['logi_on_off_share_single'];
                 <span class="site-post-category">
                     <?php
                     esc_html_e('Category: ','logi');
-                    the_category( ' ' );;
+                    the_category( ' ' );
                     ?>
                 </span>
 

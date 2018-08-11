@@ -33,6 +33,26 @@ function logi_register_meta_boxes() {
     );
     /* End meta box post */
 
+    /* Start meta box product */
+    $logi_meta_boxes[] = array(
+        'id'         => 'post_type_product_option',
+        'title'      => esc_html__( 'Product Options', 'logi' ),
+        'post_types' => array( 'product' ),
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'fields' => array(
+
+            array(
+                'id'               =>   'logi_product_file_upload',
+                'name'             =>   'Flie Upload',
+                'type'             =>   'file_advanced',
+                'max_file_uploads' =>   1,
+            ),
+
+        )
+    );
+    /* End meta box product */
+
     return $logi_meta_boxes;
 
 }

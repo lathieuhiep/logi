@@ -25,7 +25,7 @@ get_template_part('template-parts/header/inc','menu');
 
 <div id="back-top">
     <a href="#">
-        <i class="fa fa-chevron-up"></i>
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
     </a>
 </div>
 
