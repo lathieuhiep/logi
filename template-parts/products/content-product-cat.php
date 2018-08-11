@@ -66,6 +66,8 @@ $logi_product_cat_object = get_queried_object();
                             wp_reset_postdata();
                             ?>
                         </div>
+
+                        <?php logi_pagination(); ?>
                     </div>
                 </div>
             </div>
