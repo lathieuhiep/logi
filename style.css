@@ -78,6 +78,30 @@ h1, h2, h3, h4, h5, h6 {
   color: #202020;
 }
 
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
 a {
   color: #202020;
   -webkit-transition: all 0.4s ease-in-out;
@@ -100,6 +124,10 @@ p {
 
 p:last-child {
   margin-bottom: 0;
+}
+
+ul {
+  padding: 0;
 }
 
 img {
@@ -2141,6 +2169,39 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 .element-slides--v-position-bottom .element-slides__item--inner {
   -webkit-align-items: flex-end;
   align-items: flex-end;
+}
+
+/* Services */
+.element-heading {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.element-heading .title {
+  margin: 0;
+}
+
+/* Services */
+.element-services .image-services {
+  margin-bottom: 30px;
+}
+
+.element-services .title {
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.element-services .title:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #ff375c;
 }
 
 /**
