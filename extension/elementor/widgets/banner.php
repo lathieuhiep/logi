@@ -112,7 +112,7 @@ class logi_widget_banner extends Widget_Base {
 
     ?>
 
-        <div class="site-banner">
+        <div class="element-banner site-banner">
             <?php
             if ( !empty( $banner_image_id ) ) :
                 echo wp_get_attachment_image( $banner_image_id, 'full' );
