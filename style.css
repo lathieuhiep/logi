@@ -1006,28 +1006,29 @@ section.widget:last-child {
 
 section.widget .widget-title {
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin: 0;
+  padding: 10px 20px;
   font-size: 16px;
+  color: #ffffff;
+  background: #ff3062;
+  background: -moz-linear-gradient(-45deg, #ff3062 0%, #ff573f 100%);
+  background: -webkit-linear-gradient(-45deg, #ff3062 0%, #ff573f 100%);
+  background: linear-gradient(135deg, #ff3062 0%, #ff573f 100%);
 }
 
 section.widget ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  border: 1px solid #e9ebed;
 }
 
 section.widget ul li {
-  border-bottom: 1px solid #eee;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-section.widget ul li:first-child {
-  padding-top: 0;
+  border-bottom: 1px solid #e9ebed;
+  padding: 12px 40px 12px 20px;
 }
 
 section.widget ul li:last-child {
-  padding-bottom: 0;
   border-bottom: none;
 }
 
@@ -1038,6 +1039,7 @@ section.widget ul li a {
 section.widget ul li ul.children, section.widget ul li ul.sub-menu {
   padding-left: 15px;
   padding-top: 10px;
+  border: none;
 }
 
 section.widget ul li ul.children li, section.widget ul li ul.sub-menu li {
@@ -1047,6 +1049,39 @@ section.widget ul li ul.children li, section.widget ul li ul.sub-menu li {
 
 section.widget ul li ul.children li:last-child, section.widget ul li ul.sub-menu li:last-child {
   padding-bottom: 0;
+}
+
+section.widget ul.menu {
+  padding: 0;
+}
+
+section.widget ul.menu > li {
+  padding: 0;
+}
+
+section.widget ul.menu > li > a {
+  padding: 12px 40px 12px 20px;
+}
+
+section.widget ul.menu > li.current-menu-item > a, section.widget ul.menu > li.current-menu-parent > a {
+  background-color: #f2f2f2;
+  color: #ff3062;
+}
+
+section.widget ul.menu li ul.sub-menu {
+  padding: 0;
+}
+
+section.widget ul.menu li ul.sub-menu li {
+  padding: 0;
+}
+
+section.widget ul.menu li ul.sub-menu li a {
+  padding: 5px 20px 5px 30px;
+}
+
+section.widget ul.menu li ul.sub-menu li.current-menu-item a {
+  color: #ff3062;
 }
 
 section.widget select {
