@@ -206,7 +206,7 @@ function logi_register_front_end() {
     /* End Font Awesome */
 
     /* Start Font */
-//    wp_enqueue_style( 'logi-fonts', logi_fonts_url(), array(), null );
+    wp_enqueue_style( 'logi-fonts', logi_fonts_url(), array(), null );
     /* End Font */
 
     /* Start Carousel Css */
@@ -372,7 +372,7 @@ if ( ! function_exists( 'logi_fonts_url' ) ) :
             $logi_font_families = array();
 
             if ( 'off' !== $logi_font_google ) {
-                $logi_font_families[] = 'Oswald:400,700';
+                $logi_font_families[] = 'Roboto Condensed:400,700';
             }
 
             $logi_query_args = array(
