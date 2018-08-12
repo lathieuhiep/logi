@@ -247,3 +247,19 @@ pre {
     }
   }
 }
+.site-breadcrumb {
+  color: $color-hover;
+  text-transform: capitalize;
+
+  > span {
+    margin: 0 5px 0 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    > span,
+    a:hover {
+      color: $color-hover;
+    }
+  }
+}

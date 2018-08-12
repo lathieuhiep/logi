@@ -5,15 +5,7 @@ global $logi_options;
 
 $logi_blog_sidebar_single = !empty( $logi_options['logi_blog_sidebar_single'] ) ? $logi_options['logi_blog_sidebar_single'] : 'right';
 
-if ( ( $logi_blog_sidebar_single == 'left' || $logi_blog_sidebar_single == 'right' ) && is_active_sidebar( 'logi-sidebar' ) ):
-
-    $logi_col_class_blog = 'col-md-9';
-
-else:
-
-    $logi_col_class_blog = 'col-md-12';
-
-endif;
+$logi_class_col_content = logi_col_use_sidebar( $logi_blog_sidebar_single, 'logi-sidebar' );
 
 ?>
 
@@ -29,7 +21,7 @@ endif;
 
             ?>
 
-            <div class="<?php echo esc_attr( $logi_col_class_blog ); ?>">
+            <div class="<?php echo esc_attr( $logi_class_col_content ); ?>">
                 <?php
 
                 if ( have_posts() ) : while (have_posts()) : the_post();

@@ -380,7 +380,7 @@ Redux::setSection( $logi_opt_name, array(
             'type'      =>  'image_select',
             'title'     =>  esc_html__( 'Sidebar Archive', 'logi' ),
             'desc'      =>  esc_html__( 'Use for archive, index, page search', 'logi' ),
-            'default'   =>  'right',
+            'default'   =>  'left',
             'options'   =>  array(
                 'hide' =>  array(
                     'alt'   =>  'None Sidebar',
@@ -404,7 +404,7 @@ Redux::setSection( $logi_opt_name, array(
             'id'        =>  'logi_blog_sidebar_single',
             'type'      =>  'image_select',
             'title'     =>  esc_html__( 'Sidebar Single', 'logi' ),
-            'default'   =>  'right',
+            'default'   =>  'left',
             'options'   =>  array(
                 'hide' =>  array(
                     'alt'   =>  'None Sidebar',
@@ -504,16 +504,16 @@ Redux::setSection( $logi_opt_name, array(
 
 /* Start Shop */
 Redux::setSection( $logi_opt_name, array(
-    'title'             =>  esc_html__( 'Shop', 'logi' ),
+    'title'             =>  esc_html__( 'Products', 'logi' ),
     'id'                =>  'logi_shop_woo',
-    'desc'              =>  esc_html__( 'Settings WooCommerce', 'logi' ),
+    'desc'              =>  esc_html__( 'Settings Product', 'logi' ),
     'customizer_width'  =>  '400px',
     'icon'              =>  'el el-shopping-cart',
     'fields'            =>  array(
         array(
             'id'            =>  'logi_product_limit',
             'type'          =>  'slider',
-            'title'         =>  esc_html__( 'Product Limit Page Shop', 'logi' ),
+            'title'         =>  esc_html__( 'Number of products to show', 'logi' ),
             'min'           =>  1,
             'step'          =>  1,
             'max'           =>  250,
@@ -522,28 +522,38 @@ Redux::setSection( $logi_opt_name, array(
         ),
 
         array(
-            'id'        =>  'logi_products_per_row',
+            'id'        =>  'logi_product_cat_per_row',
             'type'      =>  'select',
-            'title'     =>  esc_html__( 'Products Per Row', 'logi' ),
-            'default'   =>  4,
+            'title'     =>  esc_html__( 'Products Category Per Row', 'logi' ),
+            'default'   =>  3,
             'options'   =>  array(
                 3   =>  '3 Column',
                 4   =>  '4 Column',
-                5   =>  '5 Column',
             )
         ),
 
         array(
-            'id'        =>  'logi_sidebar_woo',
-            'type'      =>  'select',
-            'title'     =>  esc_html__( 'Position Sidebar Woocommerce', 'logi' ),
-            'desc'          =>  esc_html__( 'Position Sidebar Woocommerce', 'logi' ),
+            'id'        =>  'logi_sidebar_product_cat',
+            'type'      =>  'image_select',
+            'title'     =>  esc_html__( 'Sidebar Product Category', 'logi' ),
             'default'   =>  'left',
             'options'   =>  array(
-                'left'  =>  'Left',
-                'right' =>  'Right',
-                'hide'  =>  'Hide',
-            )
+                'hide' =>  array(
+                    'alt'   =>  'None Sidebar',
+                    'img'   =>  ReduxFramework::$_url . 'assets/img/1col.png'
+                ),
+
+                'left' =>  array(
+                    'alt'   =>  'Sidebar Left',
+                    'img'   =>  ReduxFramework::$_url . 'assets/img/2cl.png'
+                ),
+
+                'right' =>  array(
+                    'alt'   =>  'Sidebar Right',
+                    'img'   =>  ReduxFramework::$_url . 'assets/img/2cr.png'
+                ),
+
+            ),
         ),
     )
 ));

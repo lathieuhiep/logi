@@ -135,9 +135,9 @@ function logi_widgets_init() {
             'description'       =>  esc_html__( 'Display sidebar right or left on all page.', 'logi' )
         ),
 
-        'logi-sidebar-wc' =>  array(
-            'name'              =>  esc_html__( 'Sidebar Woocommerce', 'logi' ),
-            'description'       =>  esc_html__( 'Display sidebar on page shop.', 'logi' )
+        'logi-sidebar-product' =>  array(
+            'name'              =>  esc_html__( 'Sidebar Product', 'logi' ),
+            'description'       =>  esc_html__( 'Display sidebar on product.', 'logi' )
         ),
 
         'logi-footer-1'   =>  array(
@@ -496,6 +496,13 @@ function logi_register_required_plugins() {
             'required'  =>  true,
         ),
 
+        // This is an example of how to include a plugin from the WordPress Plugin Repository
+        array(
+            'name'      =>  'Breadcrumb Navxt',
+            'slug'      =>  'breadcrumb-navxt',
+            'required'  =>  true,
+        ),
+
     );
 
     /**
@@ -647,3 +654,22 @@ function logi_option_posts_per_page_taxonomy() {
     endif;
 
 }
+
+/* Start Get col global */
+function logi_col_use_sidebar( $option_sidebar, $active_sidebar ) {
+
+    if ( $option_sidebar != 'hide' && is_active_sidebar( $active_sidebar ) ):
+        $class_col_content = 'col-md-9';
+    else:
+        $class_col_content = 'col-md-12';
+    endif;
+
+    return $class_col_content;
+}
+
+function logi_col_sidebar() {
+    $class_col_sidebar = 'col-md-3';
+
+    return $class_col_sidebar;
+}
+/* End Get col global */
