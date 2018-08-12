@@ -5,7 +5,7 @@ if ( is_category() ) :
 
     $logi_banner_upload = $logi_options['logi_banner_blog_upload']['id'];
 
-elseif ( is_tax( 'product_cat' ) || is_singular( 'product' ) ):
+elseif ( is_tax( 'product_cat' ) || is_tax( 'product_tag' ) || is_tax( 'brand_cat' ) || is_singular( 'product' ) ):
 
     $logi_banner_upload = $logi_options['logi_banner_product_upload']['id'];
 
@@ -29,7 +29,7 @@ if ( !empty( $logi_banner_upload ) ) :
                     <?php esc_html_e( 'Our Solutions', 'logi' ); ?>
                 </h2>
 
-            <?php elseif ( is_tax( 'product_cat' ) || is_singular( 'product' ) ) : ?>
+            <?php elseif ( is_tax( 'product_cat' ) || is_tax( 'product_tag' ) || is_tax( 'brand_cat' ) || is_singular( 'product' ) ) : ?>
 
                 <h6 class="banner-title1">
                     <?php esc_html_e( 'Smart Innovation', 'logi' ); ?>

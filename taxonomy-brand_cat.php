@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: KhacDiepKMA
- * Date: 8/12/2018
- * Time: 3:47 PM
- */
+get_header();
+
+get_template_part( 'template-parts/banner/inc', 'banner' );
+
+get_template_part( 'template-parts/products/content', 'product-cat' );
+
+get_footer();

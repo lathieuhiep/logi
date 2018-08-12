@@ -50,6 +50,7 @@ section {
         }
         a {
           display: block;
+          color: #828282;
         }
         ul {
           &.children,
@@ -87,9 +88,38 @@ section {
           }
         }
         li {
+          &.menu-item-has-children {
+            > a {
+              position: relative;
+
+              &:after {
+                position: absolute;
+                content:"\f107";
+                font-family: 'fontawesome';
+                right: 20px;
+                top: 50%;
+                font-size: 18px;
+                @include transform(translateY(-50%));
+              }
+            }
+            &.current-menu-item,
+            &.current-menu-parent {
+              > a {
+                &:after {
+                  content: "\f106";
+                }
+              }
+              ul {
+                &.sub-menu {
+                  display: block;
+                }
+              }
+            }
+          }
           ul {
             &.sub-menu {
               padding: 0;
+              display: none;
 
               li {
                 padding: 0;

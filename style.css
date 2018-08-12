@@ -1034,6 +1034,7 @@ section.widget ul li:last-child {
 
 section.widget ul li a {
   display: block;
+  color: #828282;
 }
 
 section.widget ul li ul.children, section.widget ul li ul.sub-menu {
@@ -1068,8 +1069,35 @@ section.widget ul.menu > li.current-menu-item > a, section.widget ul.menu > li.c
   color: #ff3062;
 }
 
+section.widget ul.menu li.menu-item-has-children > a {
+  position: relative;
+}
+
+section.widget ul.menu li.menu-item-has-children > a:after {
+  position: absolute;
+  content: "\f107";
+  font-family: 'fontawesome';
+  right: 20px;
+  top: 50%;
+  font-size: 18px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+section.widget ul.menu li.menu-item-has-children.current-menu-item > a:after, section.widget ul.menu li.menu-item-has-children.current-menu-parent > a:after {
+  content: "\f106";
+}
+
+section.widget ul.menu li.menu-item-has-children.current-menu-item ul.sub-menu, section.widget ul.menu li.menu-item-has-children.current-menu-parent ul.sub-menu {
+  display: block;
+}
+
 section.widget ul.menu li ul.sub-menu {
   padding: 0;
+  display: none;
 }
 
 section.widget ul.menu li ul.sub-menu li {
