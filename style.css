@@ -2228,6 +2228,72 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
   text-align: justify;
 }
 
+/* Contact Us */
+.element-contact-us .element-contact-us__box {
+  border: 1px solid #e9ebed;
+}
+
+.element-contact-us .title {
+  padding: 25px 25px 0 25px;
+  margin: 0;
+}
+
+.element-contact-us .list .item {
+  padding: 25px;
+  border-bottom: 1px solid #e9ebed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.element-contact-us .list .item:first-child {
+  padding-top: 15px;
+}
+
+.element-contact-us .list .item:last-child {
+  border-bottom: none;
+}
+
+.element-contact-us .list .item i.fa {
+  padding-top: 5px;
+  color: #009cd9;
+  font-size: 30px;
+}
+
+.element-contact-us .list .item i.fa-phone {
+  margin-left: -6px;
+  -webkit-transform: rotate(43deg);
+  -moz-transform: rotate(43deg);
+  -o-transform: rotate(43deg);
+  -ms-transform: rotate(43deg);
+  transform: rotate(43deg);
+}
+
+.element-contact-us .list .item span {
+  display: block;
+  padding-left: 30px;
+}
+
+.element-contact-us .list .item.phone span {
+  line-height: 1.4em;
+}
+
+.element-contact-us .list .item .link-email {
+  padding-left: 20px;
+  line-height: 1.5em;
+}
+
+.element-contact-us .list .item .link-email a {
+  display: block;
+  color: #ff3062;
+}
+
+.element-contact-us .list .item .link-email a:hover {
+  color: #202020;
+}
+
 /**
 # 404
 -----------------------------------------------------------------------------*/

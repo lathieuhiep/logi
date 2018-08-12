@@ -1,0 +1,56 @@
+.element-contact-us {
+  .element-contact-us__box {
+    border: 1px solid #e9ebed;
+  }
+  .title {
+    padding: 25px 25px 0 25px;
+    margin: 0;
+  }
+  .list {
+    .item {
+      padding: 25px;
+      border-bottom: 1px solid #e9ebed;
+      @include flexbox();
+
+      &:first-child {
+        padding-top: 15px;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+      i {
+        &.fa {
+          padding-top: 5px;
+          color: #009cd9;
+          font-size: 30px;
+        }
+        &.fa-phone {
+          margin-left: -6px;
+          @include transform(rotate(43deg));
+        }
+      }
+      span {
+        display: block;
+        padding-left: 30px;
+      }
+      &.phone {
+        span {
+          line-height: 1.4em;
+        }
+      }
+      .link-email {
+        padding-left: 20px;
+        line-height: 1.5em;
+
+        a {
+          display: block;
+          color: $color-hover;
+
+          &:hover {
+            color: $color-title;
+          }
+        }
+      }
+    }
+  }
+}
