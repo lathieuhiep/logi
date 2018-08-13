@@ -301,8 +301,8 @@ class logi_widget_partners extends Widget_Base {
     protected function render() {
 
         $settings   =   $this->get_settings();
-        $target     =   $settings['link_btn']['is_external'] ? ' target="_blank"' : '';
-        $nofollow   =   $settings['link_btn']['nofollow'] ? ' rel="nofollow"' : '';
+        $target     =   $settings['link']['is_external'] ? ' target="_blank"' : '';
+        $nofollow   =   $settings['link']['nofollow'] ? ' rel="nofollow"' : '';
 
     ?>
 
