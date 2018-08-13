@@ -134,6 +134,17 @@
 
 }
 
+@media ( min-width: 768px ) {
+
+  .element-partners {
+    .element-partners__logo {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+
+}
+
 @media ( min-width: 768px ) and ( max-width: 991px ) {
 
   .recent_posts_thumbs_widget_list .recent_posts_thumbs_widget_item,

@@ -74,10 +74,13 @@ class logi_widget_banner extends Widget_Base {
         $this->end_controls_section();
 
         /*STYLE TAB*/
-        $this->start_controls_section('style', array(
-            'label' =>  esc_html__( 'Text', '' ),
-            'tab'   =>  Controls_Manager::TAB_STYLE,
-        ));
+        $this->start_controls_section(
+            'style',
+            [
+                'label' => esc_html__( 'Text', 'logi' ),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
 
         $this->add_control(
             'heading_color_1',

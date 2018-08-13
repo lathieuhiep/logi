@@ -113,7 +113,7 @@ class logi_widget_slides extends Widget_Base {
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} {{CURRENT_ITEM}} .element-slides__item--inner .element-slides__item--overlay' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}} {{CURRENT_ITEM}} .element-slides__item--overlay' => 'background-color: {{VALUE}}',
                 ],
             ]
         );
@@ -137,8 +137,7 @@ class logi_widget_slides extends Widget_Base {
             [
                 'label' => esc_html__( 'Description', 'logi' ),
                 'type' => Controls_Manager::TEXTAREA,
-                'default' => esc_html__( 'Click edit button to change this text. Lorem ipsum dolor sit amet consectetur adipiscing elit dolor', 'logi' ),
-                'show_label' => false,
+                'default' => 'EMPOWERING <br />  YOUR BUSINESS',
             ]
         );
 
@@ -147,7 +146,7 @@ class logi_widget_slides extends Widget_Base {
             [
                 'label' => esc_html__( 'Button Text', 'logi' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__( 'Click Here', 'logi' ),
+                'default' => esc_html__( 'LEARN MORE', 'logi' ),
             ]
         );
 
@@ -302,18 +301,41 @@ class logi_widget_slides extends Widget_Base {
                 'default'   =>  [
                     [
                         'heading' => esc_html__( 'Slider 1 Heading', 'logi' ),
-                        'description' => esc_html__( 'Click edit button to change this text. Lorem ipsum dolor sit amet consectetur adipiscing elit dolor', 'logi' ),
-                        'button_text' => esc_html__( 'Click Here', 'logi' ),
+                        'description' => 'EMPOWERING <br />  YOUR BUSINESS',
+                        'button_text' => esc_html__( 'LEARN MORE', 'logi' ),
                         'link' => '#'
                     ],
                     [
                         'heading' => esc_html__( 'Slider 2 Heading', 'logi' ),
-                        'description' => esc_html__( 'Click edit button to change this text. Lorem ipsum dolor sit amet consectetur adipiscing elit dolor', 'logi' ),
-                        'button_text' => esc_html__( 'Click Here', 'logi' ),
+                        'description' => 'EMPOWERING <br />  YOUR BUSINESS',
+                        'button_text' => esc_html__( 'LEARN MORE', 'logi' ),
                         'link' => '#'
                     ],
                 ],
                 'title_field'   =>  '{{{ heading }}}',
+            ]
+        );
+
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+            'section_slider_options',
+            [
+                'label' => esc_html__( 'Slider Options', 'logi' ),
+                'tab' => Controls_Manager::SECTION
+            ]
+        );
+
+        $this->add_control(
+            'full_screen',
+            [
+                'label'         =>  esc_html__('Height Slides', 'logi'),
+                'type'          =>  Controls_Manager::SELECT,
+                'default' => 1,
+                'options' => [
+                    1   =>  esc_html__( 'Custom Height', 'plugin-domain' ),
+                    2   =>  esc_html__( 'Full Screen', 'plugin-domain' ),
+                ],
             ]
         );
 
@@ -333,23 +355,16 @@ class logi_widget_slides extends Widget_Base {
                     ],
                 ],
                 'default' => [
-                    'size' => 400,
+                    'size' => 500,
                 ],
                 'size_units' => [ 'px', 'vh', 'em' ],
                 'selectors' => [
                     '{{WRAPPER}} .element-slides__item' => 'height: {{SIZE}}{{UNIT}};',
                 ],
                 'separator' => 'before',
-            ]
-        );
-
-        $this->end_controls_section();
-
-        $this->start_controls_section(
-            'section_slider_options',
-            [
-                'label' => esc_html__( 'Slider Options', 'logi' ),
-                'tab' => Controls_Manager::SECTION
+                'condition' => [
+                    'full_screen!' => '2',
+                ],
             ]
         );
 
@@ -358,8 +373,8 @@ class logi_widget_slides extends Widget_Base {
             [
                 'type'          =>  Controls_Manager::SWITCHER,
                 'label'         =>  esc_html__('Loop Slider ?', 'logi'),
-                'label_off'     =>  esc_html__('No', 'logi'),
                 'label_on'      =>  esc_html__('Yes', 'logi'),
+                'label_off'     =>  esc_html__('No', 'logi'),
                 'return_value'  =>  'yes',
                 'default'       =>  'yes',
             ]
@@ -370,10 +385,10 @@ class logi_widget_slides extends Widget_Base {
             [
                 'label'         => esc_html__('Autoplay?', 'logi'),
                 'type'          => Controls_Manager::SWITCHER,
-                'label_off'     => esc_html__('No', 'logi'),
                 'label_on'      => esc_html__('Yes', 'logi'),
+                'label_off'     => esc_html__('No', 'logi'),
                 'return_value'  => 'yes',
-                'default'       => 'no',
+                'default'       => 'yes',
             ]
         );
 
@@ -385,7 +400,7 @@ class logi_widget_slides extends Widget_Base {
                 'label_on'      => esc_html__('Yes', 'logi'),
                 'label_off'     => esc_html__('No', 'logi'),
                 'return_value'  => 'yes',
-                'default'       => 'yes',
+                'default'       => 'no',
             ]
         );
 
@@ -397,7 +412,7 @@ class logi_widget_slides extends Widget_Base {
                 'label_on'      => esc_html__('Yes', 'logi'),
                 'label_off'     => esc_html__('No', 'logi'),
                 'return_value'  => 'yes',
-                'default'       => 'no',
+                'default'       => 'yes',
             ]
         );
 
@@ -439,18 +454,6 @@ class logi_widget_slides extends Widget_Base {
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .element-slides__item .element-slides__item--content' => 'max-width: {{SIZE}}{{UNIT}};',
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'slides_padding',
-            [
-                'label' => esc_html__( 'Padding', 'logi' ),
-                'type' => Controls_Manager::DIMENSIONS,
-                'size_units' => [ 'px', 'em', '%' ],
-                'selectors' => [
-                    '{{WRAPPER}} .element-slides__item .element-slides__item--inner' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -644,6 +647,26 @@ class logi_widget_slides extends Widget_Base {
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .element-slides__item .element-slides__item--link, {{WRAPPER}} .element-slides__item .element-slides__item--link a' => 'color: {{VALUE}}; border-color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->add_control( 'button_color_hover',
+            [
+                'label' => esc_html__( 'Text Color Hover', 'logi' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .element-slides__item .element-slides__item--link:hover, {{WRAPPER}} .element-slides__item .element-slides__item--link:hover a' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control( 'background_color_hover',
+            [
+                'label' => esc_html__( 'background Color Hover', 'logi' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .element-slides__item .element-slides__item--link:hover' => 'background-color: {{VALUE}}; border-color: {{VALUE}}',
                 ],
             ]
         );
@@ -968,6 +991,12 @@ class logi_widget_slides extends Widget_Base {
             'dots'      =>  ( 'yes' === $settings['dots'] ),
         ];
 
+        $class_full_screen = '';
+
+        if ( $settings['full_screen'] == 2 ) :
+            $class_full_screen = ' item_full_screen';
+        endif;
+
     ?>
 
         <div class="element-slides owl-carousel owl-theme" data-settings='<?php echo esc_attr( wp_json_encode( $logi_slider_settings ) ); ?>'>
@@ -979,14 +1008,14 @@ class logi_widget_slides extends Widget_Base {
 
             ?>
 
-                <div class="element-slides__item elementor-repeater-item-<?php echo esc_attr( $item['_id'] ); ?>">
+                <div class="element-slides__item<?php echo esc_attr( $class_full_screen ); ?> elementor-repeater-item-<?php echo esc_attr( $item['_id'] ); ?>">
+                    <?php if ( $item['background_overlay'] == 'yes' ) : ?>
+                        <div class="element-slides__item--overlay"></div>
+                    <?php endif; ?>
+
                     <div class="element-slides__item--bg"></div>
 
-                    <div class="element-slides__item--inner">
-                        <?php if ( $item['background_overlay'] == 'yes' ) : ?>
-                            <div class="element-slides__item--overlay"></div>
-                        <?php endif; ?>
-
+                    <div class="element-slides__item--inner container">
                         <div class="element-slides__item--content">
                             <?php if ( !empty( $item['heading'] ) ) : ?>
                                 <div class="element-slides__item--heading">
@@ -996,7 +1025,7 @@ class logi_widget_slides extends Widget_Base {
 
                             <?php if ( !empty( $item['description'] ) ) : ?>
                                 <div class="element-slides__item--description">
-                                    <?php echo esc_html( $item['description'] ); ?>
+                                    <?php echo wp_kses_post( $item['description'] ); ?>
                                 </div>
                             <?php endif; ?>
 
@@ -1039,6 +1068,11 @@ class logi_widget_slides extends Widget_Base {
 
             }
             sliderOptionsStr = JSON.stringify( sliderOptions );
+
+            var class_full_screen = '';
+            if ( settings.full_screen === '2' ) {
+                class_full_screen = ' item_full_screen';
+            }
         #>
 
         <div class="element-slides owl-carousel owl-theme" data-settings="{{ sliderOptionsStr }}">
@@ -1048,14 +1082,14 @@ class logi_widget_slides extends Widget_Base {
                 var target = item.link.is_external ? ' target="_blank"' : '';
             #>
 
-                <div class="element-slides__item elementor-repeater-item-{{ item._id }}">
+                <div class="element-slides__item{{ class_full_screen }} elementor-repeater-item-{{ item._id }}">
+                    <# if ( item.background_overlay === 'yes' ) { #>
+                    <div class="element-slides__item--overlay"></div>
+                    <# } #>
+
                     <div class="element-slides__item--bg"></div>
 
-                    <div class="element-slides__item--inner">
-                        <# if ( item.background_overlay === 'yes' ) { #>
-                            <div class="element-slides__item--overlay"></div>
-                        <# } #>
-
+                    <div class="element-slides__item--inner container">
                         <div class="element-slides__item--content">
                             <# if ( item.heading ) { #>
                                 <div class="element-slides__item--heading">

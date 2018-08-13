@@ -1,0 +1,52 @@
+.d-flex {
+  .elementor-widget-wrap {
+    .element-intro {
+      height: 100%;
+    }
+  }
+}
+.element-intro {
+  padding: 70px 0;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .intro-content-box {
+    width: 42%;
+    margin: 0 0 0 auto;
+    padding: 0 30px;
+  }
+  .title {
+    margin-bottom: 10px;
+  }
+  .sub-title {
+    font-size: 48px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+  .description {
+    text-align: justify;
+    line-height: 2em;
+    margin: 0;
+  }
+  .link-intro {
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 30px;
+    padding: 15px 40px;
+    color: #ffffff;
+    font-weight: bold;
+    @include border-radius(4px);
+    background: #ff3062;
+    background: -moz-linear-gradient(-45deg, #ff3062 0%, #ff573f 100%);
+    background: -webkit-linear-gradient(-45deg, #ff3062 0%,#ff573f 100%);
+    background: linear-gradient(135deg, #ff3062 0%,#ff573f 100%);
+
+    &:hover {
+      background: #ff3062;
+      background: -moz-linear-gradient(-45deg, #ff573f 0%, #ff3062 100%);
+      background: -webkit-linear-gradient(-45deg, #ff573f 0%,#ff3062 100%);
+      background: linear-gradient(135deg, #ff573f 0%,#ff3062 100%);
+    }
+  }
+}

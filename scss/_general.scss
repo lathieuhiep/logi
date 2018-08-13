@@ -289,3 +289,10 @@ pre {
     margin: 0;
   }
 }
+.d-flex {
+  &.elementor-column {
+    .elementor-widget-wrap {
+      @include flexbox();
+    }
+  }
+}

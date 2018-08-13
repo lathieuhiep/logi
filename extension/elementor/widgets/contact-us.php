@@ -193,7 +193,7 @@ class logi_widget_contact_us extends Widget_Base {
         $settings   =   $this->get_settings();
         $image_id   =   $settings['image']['id'];
 
-        ?>
+    ?>
 
         <div class="element-contact-us">
             <?php if ( !empty( $image_id ) ) : ?>
@@ -245,10 +245,67 @@ class logi_widget_contact_us extends Widget_Base {
             </div>
         </div>
 
-        <?php
+    <?php
     }
 
-//    protected function _content_template() {}
+    protected function _content_template() {
+?>
+
+        <div class="element-contact-us">
+            <# if ( settings.image.url ) { #>
+
+                <div class="image">
+                    <img src="{{ settings.image.url }}">
+                </div>
+
+            <# } #>
+
+            <div class="element-contact-us__box">
+                <h2 class="title">
+                    {{{ settings.title }}}
+                </h2>
+
+                <div class="list">
+                    <div class="item address">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+
+                        <span>
+                            {{{ settings.address }}}
+                        </span>
+                    </div>
+
+                    <div class="item phone">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+
+                        <span>
+                            {{{ settings.phone }}}
+                        </span>
+                    </div>
+
+                    <# if ( settings.list_email.length ) { #>
+
+                        <div class="item email">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+
+                            <div class="link-email">
+
+                                <# _.each( settings.list_email, function( item ) { #>
+
+                                    <a href="mailto:{{{ item.link_email.url }}}">
+                                        {{{ item.link_email.url }}}
+                                    </a>
+
+                                <# }); #>
+                            </div>
+                        </div>
+
+                    <# } #>
+                </div>
+            </div>
+        </div>
+
+<?php
+    }
 
 }
 

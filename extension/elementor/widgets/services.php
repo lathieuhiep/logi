@@ -77,9 +77,10 @@ class logi_widget_services extends Widget_Base {
         $this->add_control(
             'description',
             [
-                'label'         =>  esc_html__( 'Description', 'logi' ),
-                'type'          =>  Controls_Manager::TEXTAREA,
-                'default'       =>  'Logicode provides in-house warranty support and out-of-warranty repairs. We keep common spare parts so that we can turnaround your problem units in the shortest time. We also provide on-site repair services. When you purchase our products, you can be always be assured of our quality services.',
+                'label'     =>  esc_html__( 'Description', 'logi' ),
+                'type'      =>  Controls_Manager::TEXTAREA,
+                'rows'      =>  15,
+                'default'   =>  'Logicode provides in-house warranty support and out-of-warranty repairs. We keep common spare parts so that we can turnaround your problem units in the shortest time. We also provide on-site repair services. When you purchase our products, you can be always be assured of our quality services.',
             ]
         );
 
@@ -185,7 +186,7 @@ class logi_widget_services extends Widget_Base {
             <?php endif; ?>
 
             <p class="description">
-                <?php echo esc_html( $settings['description'] ); ?>
+                <?php echo wp_kses_post( $settings['description'] ); ?>
             </p>
         </div>
 
