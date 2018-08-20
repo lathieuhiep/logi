@@ -126,13 +126,21 @@ class logi_widget_banner extends Widget_Base {
 
             <div class="banner-title d-flex align-items-center">
                 <div class="container">
-                    <h6 class="banner-title1">
-                        <?php echo esc_html( $settings['heading_1'] ); ?>
-                    </h6>
+                    <?php if ( !empty( $settings['heading_1'] ) ) : ?>
 
-                    <h2 class="banner-title2">
-                        <?php echo esc_html( $settings['heading_2'] ); ?>
-                    </h2>
+                        <h6 class="banner-title1">
+                            <?php echo esc_html( $settings['heading_1'] ); ?>
+                        </h6>
+
+                    <?php endif; ?>
+
+                    <?php if ( !empty( $settings['heading_2'] ) ) : ?>
+
+                        <h2 class="banner-title2">
+                            <?php echo esc_html( $settings['heading_2'] ); ?>
+                        </h2>
+
+                    <?php endif; ?>
                 </div>
             </div>
 

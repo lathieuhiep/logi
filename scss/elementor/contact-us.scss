@@ -1,54 +1,101 @@
 .element-contact-us {
-  .element-contact-us__box {
-    border: 1px solid #e9ebed;
-  }
   .title {
     padding: 25px 25px 0 25px;
     margin: 0;
   }
   .list {
     .item {
-      padding: 25px;
-      border-bottom: 1px solid #e9ebed;
       @include flexbox();
 
-      &:first-child {
-        padding-top: 15px;
-      }
-      &:last-child {
-        border-bottom: none;
-      }
-      i {
-        &.fa {
-          padding-top: 5px;
-          color: #009cd9;
-          font-size: 30px;
-        }
-        &.fa-phone {
-          margin-left: -6px;
-          @include transform(rotate(43deg));
-        }
-      }
       span {
         display: block;
-        padding-left: 30px;
-      }
-      &.phone {
-        span {
-          line-height: 1.4em;
-        }
       }
       .link-email {
-        padding-left: 20px;
         line-height: 1.5em;
 
+        span {
+          padding-right: 3px;
+        }
         a {
-          display: block;
+          display: inline-block;
           color: $color-hover;
 
           &:hover {
             color: $color-title;
           }
+        }
+      }
+    }
+  }
+  &.contact-us-type1 {
+    .element-contact-us__box {
+      border: 1px solid #e9ebed;
+    }
+    .list {
+      .item {
+        padding: 25px;
+        border-bottom: 1px solid #e9ebed;
+
+        &:first-child {
+          padding-top: 15px;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+        .custom-padding {
+          padding-left: 30px;
+
+          &.link-email {
+            padding-left: 20px;
+          }
+        }
+        &.phone {
+          span {
+            line-height: 1.4em;
+          }
+        }
+        i {
+          &.fa {
+            padding-top: 5px;
+            font-size: 30px;
+            color: #009cd9;
+          }
+          &.fa-phone {
+            margin-left: -6px;
+            @include transform(rotate(43deg));
+          }
+        }
+      }
+    }
+  }
+  &.contact-us-type2 {
+    .list {
+      margin: 0 -15px;
+      @include flexbox();
+
+      .item {
+        padding: 0 15px;
+        @include flex(0 0 33.333333%);
+        max-width: 33.333333%;
+        @include align-items(center);
+
+        i {
+          &.fa {
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 25px;
+            color: $color-hover;
+            background-color: #f8f8f8;
+            @include flex(0 0 auto);
+          }
+        }
+        .custom-padding {
+          padding-left: 20px;
+        }
+        span,
+        a {
+          font-size: 13px;
         }
       }
     }

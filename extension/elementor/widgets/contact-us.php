@@ -32,13 +32,23 @@ class logi_widget_contact_us extends Widget_Base {
         );
 
         $this->add_control(
+            'type_contact',
+            [
+                'label'     =>  esc_html__( 'Type Contact Us', 'logi' ),
+                'type'      =>  Controls_Manager::SELECT,
+                'default'   =>  1,
+                'options'   =>  [
+                    '1' =>  esc_html__( 'Type 1', 'logi' ),
+                    '2' =>  esc_html__( 'Type 2', 'logi' ),
+                ]
+            ]
+        );
+
+        $this->add_control(
             'image',
             [
                 'label'     =>  esc_html__( 'Image', 'logi' ),
                 'type'      =>  Controls_Manager::MEDIA,
-                'default'   =>  [
-                    'url'   =>  Utils::get_placeholder_image_src(),
-                ],
             ]
         );
 
@@ -80,13 +90,43 @@ class logi_widget_contact_us extends Widget_Base {
             ]
         );
 
+        $repeater_phone = new Repeater();
+
+        $repeater_phone->add_control(
+            'list_title_phone', [
+                'label'         =>  esc_html__( 'Title', 'logi' ),
+                'type'          =>  Controls_Manager::TEXT,
+                'default'       =>  'T:',
+                'label_block'   =>  true,
+            ]
+        );
+
+        $repeater_phone->add_control(
+            'list_number_phone', [
+                'label'         =>  esc_html__( 'Number Phone', 'logi' ),
+                'type'          =>  Controls_Manager::TEXT,
+                'default'       =>  '+(65) 6458 8337',
+                'label_block'   =>  true,
+            ]
+        );
+
         $this->add_control(
-            'phone',
+            'list_phone',
             [
-                'label'     =>  esc_html__( 'Phone', 'plugin-name' ),
-                'type'      =>  Controls_Manager::TEXTAREA,
-                'rows'      =>  10,
-                'default'   =>  'T: +(65) 6458 8337 <br /> F: +(65) 6458 8553',
+                'label'     =>  esc_html__( 'List Phone', 'logi' ),
+                'type'      =>  Controls_Manager::REPEATER,
+                'fields'    =>  $repeater_phone->get_controls(),
+                'default'   =>  [
+                    [
+                        'list_title_phone'  =>  'T:',
+                        'list_number_phone' =>  '+(65) 6458 8337',
+                    ],
+                    [
+                        'list_title_phone'  =>  'F:',
+                        'list_number_phone' =>  '+(65) 6458 8553',
+                    ],
+                ],
+                'title_field' => '{{{ list_title_phone }}}',
             ]
         );
 
@@ -99,10 +139,10 @@ class logi_widget_contact_us extends Widget_Base {
             ]
         );
 
-        $repeater = new Repeater();
+        $repeater_email = new Repeater();
 
-        $repeater->add_control(
-            'list_title', [
+        $repeater_email->add_control(
+            'list_title_email', [
                 'label'         =>  esc_html__( 'Title', 'logi' ),
                 'type'          =>  Controls_Manager::TEXT,
                 'default'       =>  esc_html__( 'Title Email' , 'logi' ),
@@ -110,7 +150,7 @@ class logi_widget_contact_us extends Widget_Base {
             ]
         );
 
-        $repeater->add_control(
+        $repeater_email->add_control(
             'link_email',
             [
                 'label'         =>  esc_html__( 'Link Email', 'logi' ),
@@ -129,16 +169,16 @@ class logi_widget_contact_us extends Widget_Base {
             [
                 'label'     =>  esc_html__( 'Email List', 'logi' ),
                 'type'      =>  Controls_Manager::REPEATER,
-                'fields'    =>  $repeater->get_controls(),
+                'fields'    =>  $repeater_email->get_controls(),
                 'default'   =>  [
                     [
-                        'list_title'    =>  'Email 1',
+                        'list_title_email'  =>  'Email 1',
                     ],
                     [
-                        'list_title'    =>  'Email 2',
+                        'list_title_email'  =>  'Email 2',
                     ],
                 ],
-                'title_field' => '{{{ list_title }}}',
+                'title_field' => '{{{ list_title_email }}}',
             ]
         );
 
@@ -193,9 +233,15 @@ class logi_widget_contact_us extends Widget_Base {
         $settings   =   $this->get_settings();
         $image_id   =   $settings['image']['id'];
 
+        if ( $settings['type_contact'] == 1 ) :
+            $class_type_contact = 'contact-us-type1';
+        else:
+            $class_type_contact = 'contact-us-type2';
+        endif;
+
     ?>
 
-        <div class="element-contact-us">
+        <div class="element-contact-us <?php echo esc_attr( $class_type_contact ); ?>">
             <?php if ( !empty( $image_id ) ) : ?>
 
                 <div class="image">
@@ -205,37 +251,64 @@ class logi_widget_contact_us extends Widget_Base {
             <?php endif; ?>
 
             <div class="element-contact-us__box">
-                <h2 class="title">
-                    <?php echo esc_html( $settings['title'] ); ?>
-                </h2>
+                <?php if ( !empty( $settings['title'] ) ): ?>
+
+                    <h2 class="title">
+                        <?php echo esc_html( $settings['title'] ); ?>
+                    </h2>
+
+                <?php endif; ?>
 
                 <div class="list">
-                    <div class="item address">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <?php if ( !empty( $settings['address'] ) ) : ?>
 
-                        <span>
-                            <?php echo wp_kses_post( $settings['address'] ); ?>
-                        </span>
-                    </div>
+                        <div class="item address">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
 
-                    <div class="item phone">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
+                            <span class="custom-padding flex-grow-1">
+                                <?php echo wp_kses_post( $settings['address'] ); ?>
+                            </span>
+                        </div>
 
-                        <span>
-                            <?php echo wp_kses_post( $settings['phone'] ); ?>
-                        </span>
-                    </div>
+                    <?php endif; ?>
+
+                    <?php if( !empty( $settings['list_phone'] ) ) : ?>
+
+                        <div class="item phone">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+
+                            <div class="list-phone custom-padding flex-grow-1">
+                                <?php foreach ( $settings['list_phone'] as $item ) : ?>
+                                    <span>
+                                        <?php echo esc_html( $item['list_title_phone'] . $item['list_number_phone'] ); ?>
+                                    </span>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+
+                    <?php endif; ?>
 
                     <?php if( !empty( $settings['list_email'] ) ) : ?>
 
                         <div class="item email">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
 
-                            <div class="link-email">
+                            <div class="link-email custom-padding flex-grow-1">
+
                                 <?php foreach ( $settings['list_email'] as $item ) : ?>
-                                    <a href="mailto:<?php echo esc_attr( $item['link_email']['url'] ); ?>">
-                                        <?php echo esc_html( $item['link_email']['url'] ); ?>
-                                    </a>
+
+                                    <div class="link-email__item d-flex">
+                                        <?php if ( !empty( $item['list_title_email'] ) ) : ?>
+                                            <span>
+                                                <?php echo esc_html( $item['list_title_email'] ); ?>
+                                            </span>
+                                        <?php endif; ?>
+
+                                        <a href="mailto:<?php echo esc_attr( $item['link_email']['url'] ); ?>">
+                                            <?php echo esc_html( $item['link_email']['url'] ); ?>
+                                        </a>
+                                    </div>
+
                                 <?php endforeach; ?>
                             </div>
                         </div>
@@ -251,7 +324,16 @@ class logi_widget_contact_us extends Widget_Base {
     protected function _content_template() {
 ?>
 
-        <div class="element-contact-us">
+        <#
+            var type_contact        =   settings.type_contact;
+            var class_type_contact  =   'contact-us-type1';
+
+            if ( type_contact == 2 ) {
+                class_type_contact = 'contact-us-type2';
+            }
+        #>
+
+        <div class="element-contact-us {{ class_type_contact }}">
             <# if ( settings.image.url ) { #>
 
                 <div class="image">
@@ -261,39 +343,65 @@ class logi_widget_contact_us extends Widget_Base {
             <# } #>
 
             <div class="element-contact-us__box">
-                <h2 class="title">
-                    {{{ settings.title }}}
-                </h2>
+                <# if ( settings.title ) { #>
+
+                    <h2 class="title">
+                        {{{ settings.title }}}
+                    </h2>
+
+                <# } #>
 
                 <div class="list">
-                    <div class="item address">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <# if ( settings.address ) { #>
 
-                        <span>
-                            {{{ settings.address }}}
-                        </span>
-                    </div>
+                        <div class="item address">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
 
-                    <div class="item phone">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
+                            <span class="custom-padding flex-grow-1">
+                                {{{ settings.address }}}
+                            </span>
+                        </div>
 
-                        <span>
-                            {{{ settings.phone }}}
-                        </span>
-                    </div>
+                    <# } #>
+
+                    <# if ( settings.list_phone.length ) { #>
+
+                        <div class="item phone">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+
+                            <div class="list-phone custom-padding flex-grow-1">
+                                <# _.each( settings.list_phone, function( item ) { #>
+
+                                    <span>
+                                        {{{ item.list_title_phone }}}{{{ item.list_number_phone }}}
+                                    </span>
+
+                                <# }); #>
+                            </div>
+                        </div>
+
+                    <# } #>
 
                     <# if ( settings.list_email.length ) { #>
 
                         <div class="item email">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
 
-                            <div class="link-email">
+                            <div class="link-email custom-padding flex-grow-1">
 
                                 <# _.each( settings.list_email, function( item ) { #>
 
-                                    <a href="mailto:{{{ item.link_email.url }}}">
-                                        {{{ item.link_email.url }}}
-                                    </a>
+                                    <div class="link-email__item d-flex">
+                                        <# if ( item.list_title_email ) { #>
+                                            <span>
+                                                {{{ item.list_title_email }}}
+                                            </span>
+                                        <# } #>
+
+                                        <a href="mailto:{{{ item.link_email.url }}}">
+                                            {{{ item.link_email.url }}}
+                                        </a>
+                                    </div>
 
                                 <# }); #>
                             </div>
