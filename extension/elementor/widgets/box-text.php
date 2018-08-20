@@ -130,7 +130,7 @@ class logi_widget_box_text extends Widget_Base {
         $this->add_control(
             'title_color',
             [
-                'label'     =>  __( 'Title Color', 'logi' ),
+                'label'     =>  esc_html__( 'Title Color', 'logi' ),
                 'type'      =>  Controls_Manager::COLOR,
                 'selectors' =>  [
                     '{{WRAPPER}} .element-product-cat .item .title' => 'color: {{VALUE}}',

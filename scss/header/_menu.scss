@@ -1,70 +1,111 @@
-.header .navbar {
-  margin: 0;
-}
-.header-bottom {
-  -webkit-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.3);
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba( 255,255,255,0.2 );
+  border-bottom: 1px solid rgba( 255,255,255,0.2 );
+  z-index: 999;
+
+  .navbar {
+    margin: 0;
+  }
 }
 .site-logo {
-  -webkit-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-.site-logo a {
-  display: inline-block;
-  line-height: 64px;
-}
-.site-menu {
-  -webkit-flex: 1;
-  flex: 1;
+  padding: 20px 0 20px 15px;
+  @include flex(0 0 auto);
+
+  a {
+    display: inline-block;
+  }
 }
 .site-menu {
+  @include flex(1);
+
   ul {
     padding: 0;
     margin: 0;
+    min-height: 100%;
 
     li {
-      display: inline-block;
-      padding: 22px 0;
+      padding: 0;
       position: relative;
-      text-align: left;
+      border-right: 1px solid rgba( 255,255,255,0.2 );
+      @include transition(all 0.4s ease-out);
 
+      &:first-child {
+        border-left: 1px solid rgba( 255,255,255,0.2 );
+      }
       a {
-        padding: 0 15px;
+        padding: 30px 20px;
         text-shadow: none;
         display: block;
-        &:hover {
-          background-color: transparent;
-          color: $color-hover;
+        color: #ffffff;
+        font-size: 12px;
+        text-transform: uppercase;
+        @include flexbox();
+        @include align-items(center);
+        min-height: 100%;
+      }
+      &:hover {
+        border-color: $background-hover;
+
+        > a {
+          background-color: $background-hover;
         }
       }
-      &:last-child {
-        a {
-          padding-right: 0;
+      &.current_page_item,
+      &.current-menu-ancestor {
+        border-color: $background-hover;
+
+        > a {
+          background-color: $background-hover;
         }
       }
       .sub-menu {
         min-width: 160px;
-        border-top: 1px solid $color-hover;
-        background-color: $border-color;
+        background-color: #ffffff;
         position: absolute;
         top: 120%;
         left: 0;
         z-index: -1;
         visibility: hidden;
         opacity: 0;
+        min-height: auto;
         @include transition(all 0.4s ease-out);
 
         li {
-          padding: 8px 0;
+          padding: 0;
           display: block;
+          border: none;
 
           a {
             white-space: nowrap;
+            color: #202020;
+            padding: 10px 15px;
+            border-bottom: 1px solid #e1e1e1;
+
+            &:hover {
+              border-color: $background-hover;
+              background-color: $background-hover;
+              color: #ffffff;
+            }
+          }
+          &:last-child {
+            a {
+              border-bottom: none;
+            }
+          }
+          &.current-menu-item {
+            > a {
+              background-color: $background-hover;
+              color: #ffffff;
+              border-color: $background-hover;
+            }
           }
           .sub-menu {
             left: 90%;
-            top: -1px;
+            top: 0;
           }
           &:hover {
             > .sub-menu {
