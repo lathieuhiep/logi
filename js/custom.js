@@ -52,6 +52,20 @@
         $( document ).general_owlCarousel_item( '.site-post-slides' );
         /* End Gallery Single */
 
+        $('.link-post-popup').fancybox({
+            loop: true,
+
+            iframe : {
+                css : {
+                    width : '950px',
+                    height: '350px'
+                },
+                attr: {
+                    scrolling: "auto"
+                }
+            }
+        });
+
     });
 
     $( window ).on( "load", function() {

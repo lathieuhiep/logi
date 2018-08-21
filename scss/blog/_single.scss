@@ -1,8 +1,28 @@
 .site-single {
+  padding: 15px;
+
   .site-post-title,
   .site-post-image,
   .page-links {
     margin-bottom: 30px;
+  }
+  .site-post-image {
+    img {
+      width: 100%;
+    }
+  }
+  .site-post-content {
+    .title-post {
+      font-size: 30px;
+      padding-left: 20px;
+      text-transform: uppercase;
+      border-left: 2px solid $background-hover;
+    }
+    .site-post__detail {
+      p {
+        line-height: 2em;
+      }
+    }
   }
 }
 .site-post-slides {
@@ -122,6 +142,19 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+}
+.fancybox-slide--iframe {
+  .fancybox-content {
+    margin: 0;
+    padding: 10px;
+    background: rgba(255,255,255,0.1);
+    @include border-radius(3px);
+    @include box-shadow(0 10px 25px rgba(0,0,0,0.5));
+
+    .fancybox-iframe {
+      @include border-radius(3px);
     }
   }
 }

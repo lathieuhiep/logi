@@ -19,6 +19,43 @@ $logi_class_col_content = logi_col_use_sidebar( $logi_blog_sidebar_archive, 'log
 
             <div class="<?php echo esc_attr( $logi_class_col_content ); ?>">
                 <?php
+                if ( is_category() ) :
+
+                    $logi_category          =   get_queried_object();
+                    $logi_name_cat          =   $logi_category->name;
+                    $logi_description_cat   =   $logi_category->description;
+
+                ?>
+                    <div class="site-cat-top">
+                        <div class="element-heading">
+                            <h2 class="title">
+                                <?php echo esc_html( $logi_name_cat ); ?>
+                            </h2>
+                        </div>
+
+                        <?php if ( function_exists( 'z_taxonomy_image' ) ) : ?>
+
+                            <div class="cat-image">
+                                <?php z_taxonomy_image( $logi_category->term_id ); ?>
+                            </div>
+
+                        <?php
+                        endif;
+
+                        if ( !empty( $logi_description_cat ) ) :
+
+                        ?>
+
+                            <p class="cat-description">
+                               <?php echo esc_html( $logi_description_cat ); ?>
+                            </p>
+
+                        <?php endif; ?>
+                    </div>
+
+                <?php
+                endif;
+
                 if ( have_posts() ) :
 
                     if ( ! is_search() ):
