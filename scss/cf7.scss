@@ -1,0 +1,66 @@
+form {
+  &.wpcf7-form {
+    p {
+      position: relative;
+      margin: 0;
+
+      span {
+        &.ajax-loader {
+          position: absolute;
+          top: 8px;
+        }
+      }
+    }
+    label {
+      display: block;
+      margin-bottom: 15px;
+    }
+    span {
+      &.wpcf7-form-control-wrap {
+        display: block;
+        margin-bottom: 15px;
+
+        input,
+        textarea {
+          height: auto;
+          width: 100%;
+          display: block;
+          border: 1px solid #e9ebed;
+          background-color: #f8f8f8;
+          padding: 4px 12px;
+          color: #202020;
+          font-style: italic;
+
+          &:focus {
+            border-color: #ff335f;
+          }
+        }
+        textarea {
+          height: 130px;
+        }
+      }
+    }
+    .wpcf7-submit {
+      color: #fff;
+      padding: 10px 40px;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      background: #ff3062;
+      background: -moz-linear-gradient(-45deg, #ff3062 0%, #ff573f 100%);
+      background: -webkit-linear-gradient(-45deg, #ff3062 0%,#ff573f 100%);
+      background: linear-gradient(135deg, #ff3062 0%,#ff573f 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3062', endColorstr='#ff573f',GradientType=1 );
+      @include border-radius(4px);
+      @include transition(all 0.4s ease-in-out);
+
+      &:hover {
+        background: #ff3062;
+        background: -moz-linear-gradient(-45deg, #ff573f 0%, #ff3062 100%);
+        background: -webkit-linear-gradient(-45deg, #ff573f 0%,#ff3062 100%);
+        background: linear-gradient(135deg, #ff573f 0%,#ff3062 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff573f', endColorstr='#ff3062',GradientType=1 );
+      }
+    }
+  }
+}
