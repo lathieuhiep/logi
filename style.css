@@ -36,6 +36,7 @@
   ## Our Services
   ## Services
   ## Contact Us
+  ## Offices
 # Contact Form 7
 # 404
 # Footer
@@ -730,12 +731,7 @@ form.post-password-form p input[type='submit'] {
 
 /* Menu */
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #ffffff;
   z-index: 999;
 }
 
@@ -771,7 +767,7 @@ form.post-password-form p input[type='submit'] {
 .site-menu ul li {
   padding: 0;
   position: relative;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(213, 213, 213, 0.5);
   -webkit-transition: all 0.4s ease-out;
   -moz-transition: all 0.4s ease-out;
   -o-transition: all 0.4s ease-out;
@@ -779,14 +775,13 @@ form.post-password-form p input[type='submit'] {
 }
 
 .site-menu ul li:first-child {
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(213, 213, 213, 0.5);
 }
 
 .site-menu ul li a {
   padding: 30px 20px;
   text-shadow: none;
   display: block;
-  color: #ffffff;
   font-size: 12px;
   text-transform: uppercase;
   display: -webkit-box;
@@ -806,6 +801,7 @@ form.post-password-form p input[type='submit'] {
 }
 
 .site-menu ul li:hover > a {
+  color: #ffffff;
   background-color: #ff3062;
 }
 
@@ -814,6 +810,7 @@ form.post-password-form p input[type='submit'] {
 }
 
 .site-menu ul li.current_page_item > a, .site-menu ul li.current-menu-ancestor > a {
+  color: #ffffff;
   background-color: #ff3062;
 }
 
@@ -2942,6 +2939,98 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 .element-contact-us.contact-us-type2 .list .item span,
 .element-contact-us.contact-us-type2 .list .item a {
   font-size: 13px;
+}
+
+/* Offices */
+.element-offices .image-item {
+  margin-bottom: 30px;
+}
+
+.element-offices .image-item img {
+  width: 100%;
+}
+
+.element-offices .title-item {
+  margin: 0;
+}
+
+.element-offices .item {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.element-offices .offices-content__item {
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.element-offices .offices-content__item:last-child {
+  margin-bottom: 0;
+}
+
+.element-offices .offices-content__item.address {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+}
+
+.element-offices .offices-content__item i {
+  color: #ff3062;
+}
+
+.element-offices .offices-content__item i.fa {
+  padding-top: 7px;
+  width: 15px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.element-offices .offices-content__item p {
+  padding-left: 15px;
+}
+
+.element-offices .offices-content__item p span {
+  display: block;
+}
+
+.element-offices .offices-content__item p a {
+  color: #ff3062;
+}
+
+.element-offices .offices-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
 }
 
 /**

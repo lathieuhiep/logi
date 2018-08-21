@@ -1,0 +1,51 @@
+.element-offices {
+  .image-item {
+    margin-bottom: 30px;
+
+    img {
+      width: 100%;
+    }
+  }
+  .title-item {
+    margin: 0;
+  }
+  .item {
+    @include flexbox();
+    @include flex-direction(column);
+  }
+  .offices-content__item {
+    margin-bottom: 5px;
+    @include flexbox();
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.address {
+      @include flexbox();
+      @include flex(1 0 auto);
+    }
+    i {
+      color: $color-hover;
+      &.fa {
+        padding-top: 7px;
+        width: 15px;
+        flex: 0 0 auto;
+      }
+    }
+    p {
+      padding-left: 15px;
+
+      span {
+        display: block;
+      }
+      a {
+        color: $color-hover;
+      }
+    }
+  }
+  .offices-content {
+    @include flexbox();
+    @include flex-direction(column);
+    @include flex(1 0 auto);
+  }
+}

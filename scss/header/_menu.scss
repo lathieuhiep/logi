@@ -1,10 +1,10 @@
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba( 255,255,255,0.2 );
-  border-bottom: 1px solid rgba( 255,255,255,0.2 );
+  //position: absolute;
+  //top: 0;
+  //left: 0;
+  //right: 0;
+  background-color: #ffffff;
+  //border-bottom: 1px solid rgba( 0,0,0,0.5 );
   z-index: 999;
 
   .navbar {
@@ -30,17 +30,16 @@
     li {
       padding: 0;
       position: relative;
-      border-right: 1px solid rgba( 255,255,255,0.2 );
+      border-right: 1px solid rgba( 213,213,213, 0.5 );
       @include transition(all 0.4s ease-out);
 
       &:first-child {
-        border-left: 1px solid rgba( 255,255,255,0.2 );
+        border-left: 1px solid rgba( 213,213,213, 0.5 );
       }
       a {
         padding: 30px 20px;
         text-shadow: none;
         display: block;
-        color: #ffffff;
         font-size: 12px;
         text-transform: uppercase;
         @include flexbox();
@@ -51,6 +50,7 @@
         border-color: $background-hover;
 
         > a {
+          color: #ffffff;
           background-color: $background-hover;
         }
       }
@@ -59,6 +59,7 @@
         border-color: $background-hover;
 
         > a {
+          color: #ffffff;
           background-color: $background-hover;
         }
       }
