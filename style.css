@@ -37,6 +37,7 @@
   ## Services
   ## Contact Us
   ## Offices
+  ## Download PDF
 # Contact Form 7
 # 404
 # Footer
@@ -1334,6 +1335,74 @@ section.widget .social-network-item {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+}
+
+section.widget .product-link-widget__content {
+  position: relative;
+}
+
+section.widget .product-link-widget__content img {
+  width: 100%;
+}
+
+section.widget .product-link-widget__content .product-link-widget__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 25px 30px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+section.widget .product-link-widget__content .title {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+section.widget .product-link-widget__content .product-link-widget__item {
+  color: #ffffff;
+  padding: 15px 40px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: #ff3062;
+  background: -moz-linear-gradient(-45deg, #ff3062 0%, #ff573f 100%);
+  background: -webkit-linear-gradient(-45deg, #ff3062 0%, #ff573f 100%);
+  background: -webkit-linear-gradient(315deg, #ff3062 0%, #ff573f 100%);
+  background: -o-linear-gradient(315deg, #ff3062 0%, #ff573f 100%);
+  background: linear-gradient(135deg, #ff3062 0%, #ff573f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3062', endColorstr='#ff573f',GradientType=1 );
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+section.widget .product-link-widget__content .product-link-widget__item:hover {
+  background: #ff3062;
+  background: -moz-linear-gradient(-45deg, #ff573f 0%, #ff3062 100%);
+  background: -webkit-linear-gradient(-45deg, #ff573f 0%, #ff3062 100%);
+  background: -webkit-linear-gradient(315deg, #ff573f 0%, #ff3062 100%);
+  background: -o-linear-gradient(315deg, #ff573f 0%, #ff3062 100%);
+  background: linear-gradient(135deg, #ff573f 0%, #ff3062 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff573f', endColorstr='#ff3062',GradientType=1 );
 }
 
 section.widget .woocommerce-product-search {
@@ -3160,6 +3229,139 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
   -ms-flex: 1 0 auto;
   -webkit-box-flex: 1;
   flex: 1 0 auto;
+}
+
+/* Download PDF */
+.element-download-pdf .item-pdf {
+  position: relative;
+}
+
+.element-download-pdf .item-pdf:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.element-download-pdf .item-pdf:hover:after {
+  opacity: 0;
+}
+
+.element-download-pdf .item-pdf:hover .item-pdf__content:after {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.element-download-pdf .item-pdf:hover .item-download-pdf-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.element-download-pdf .item-pdf .item-pdf-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.element-download-pdf .item-pdf .item-pdf__content {
+  position: relative;
+  overflow: hidden;
+}
+
+.element-download-pdf .item-pdf .item-pdf__content:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 5px solid #ff335f;
+  background-image: url("images/shape1.png");
+  background-repeat: no-repeat;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.element-download-pdf .item-pdf .item-pdf__image {
+  height: 410px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.element-download-pdf .item-pdf .item-download-pdf-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 1;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.element-download-pdf .item-pdf .item-download-pdf-btn span {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 20px 30px 20px;
+  background: #ff3062;
+  background: -moz-linear-gradient(-45deg, #ff3062 0%, #ff573f 100%);
+  background: -webkit-linear-gradient(-45deg, #ff3062 0%, #ff573f 100%);
+  background: -webkit-linear-gradient(315deg, #ff3062 0%, #ff573f 100%);
+  background: -o-linear-gradient(315deg, #ff3062 0%, #ff573f 100%);
+  background: linear-gradient(135deg, #ff3062 0%, #ff573f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3062', endColorstr='#ff573f',GradientType=1 );
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.element-download-pdf .item-pdf .item-download-pdf-btn span i.fa {
+  margin-right: 5px;
 }
 
 /**

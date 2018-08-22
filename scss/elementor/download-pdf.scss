@@ -1,0 +1,97 @@
+.element-download-pdf {
+  .item-pdf {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.3);
+      @include transition( all 0.4s ease-in-out );
+    }
+    &:hover {
+      &:after {
+        opacity: 0;
+      }
+      .item-pdf__content {
+        &:after {
+          top: 0;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      .item-download-pdf-btn {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    .item-pdf-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+    }
+    .item-pdf__content {
+      position: relative;
+      overflow: hidden;
+
+      &:after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 5px solid #ff335f;
+        background-image: url("images/shape1.png");
+        background-repeat: no-repeat;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        @include transition( all 0.4s ease-in-out );
+      }
+    }
+    .item-pdf__image {
+      height: 410px;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+    }
+    .item-download-pdf-btn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      z-index: 1;
+      @include transition( all 0.4s ease-in-out );
+
+      span {
+        display: inline-block;
+        color: #ffffff;
+        font-weight: 700;
+        padding: 20px 30px 20px;
+        background: #ff3062;
+        background: -moz-linear-gradient(-45deg, #ff3062 0%, #ff573f 100%);
+        background: -webkit-linear-gradient(-45deg, #ff3062 0%,#ff573f 100%);
+        background: linear-gradient(135deg, #ff3062 0%,#ff573f 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3062', endColorstr='#ff573f',GradientType=1 );
+        @include border-radius(10px);
+
+        i.fa {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
