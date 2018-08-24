@@ -197,29 +197,11 @@ function logi_register_front_end() {
     * Start Get Css Front End
     * */
 
-    /* Start Bootstrap Css */
-    wp_enqueue_style( 'bootstrap', get_theme_file_uri( '/css/bootstrap.min.css' ), array(), '4.1.3' );
-    /* End Bootstrap Css */
-
-    /* Start Font Awesome */
-    wp_enqueue_style( 'font-awesome', get_theme_file_uri( '/css/font-awesome.min.css' ), array(), '4.7.0' );
-    /* End Font Awesome */
-
     /* Start Font */
     wp_enqueue_style( 'logi-fonts', logi_fonts_url(), array(), null );
     /* End Font */
 
-    /* Start Carousel Css */
-    wp_enqueue_style( 'owl-carousel', get_theme_file_uri( '/css/owl.carousel.min.css' ), array(), '2.3.4' );
-    /* End Carousel Css */
-
-    /* Start Lity Css */
-    wp_enqueue_style( 'lity', get_theme_file_uri( '/css/lity.min.css' ), array(), '2.3.1' );
-    /* End Lity Css */
-
-    /* Start Fancybox Css */
-    wp_enqueue_style( 'jquery-fancybox', get_theme_file_uri( '/css/jquery.fancybox.min.css' ), array(), '3.3.5' );
-    /* End Lity Css */
+    wp_enqueue_style( 'logi-main', get_theme_file_uri( '/css/main.css' ), array(), '' );
 
     /*  Start Style Css   */
     wp_enqueue_style( 'logi-style', get_stylesheet_uri() );
@@ -239,25 +221,11 @@ function logi_register_front_end() {
     wp_enqueue_script( 'html5', get_theme_file_uri( '/js/html5.js' ), array(), '3.7.3' );
     wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
-    wp_enqueue_script( 'bootstrap', get_theme_file_uri( '/js/bootstrap.min.js' ), array('jquery'), '4.1.3', true );
-
-    wp_register_script( 'owl-carousel', get_theme_file_uri( '/js/owl.carousel.min.js' ), array(), '2.3.4', true );
-
-    if( is_single() || is_tag() || is_category() || is_archive() || is_author() || is_search() || is_home()){
-
-        /* Start Carousel Js */
-        wp_enqueue_script( 'owl-carousel' );
-        /* End Carousel Js */
-
-    }
+    wp_enqueue_script( 'logi-main-js', get_theme_file_uri( '/js/main.min.js' ), array(), '3.3.5', true );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
-
-    wp_register_script( 'lity', get_theme_file_uri( '/js/lity.min.js' ), array(), '2.3.1', true );
-
-    wp_enqueue_script( 'jquery-fancybox', get_theme_file_uri( '/js/jquery.fancybox.min.js' ), array(), '3.3.5', true );
 
     wp_enqueue_script( 'logi-custom', get_theme_file_uri( '/js/custom.js' ), array(), '1.0.0', true );
 

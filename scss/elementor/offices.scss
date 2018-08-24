@@ -10,6 +10,7 @@
     margin: 0;
   }
   .item {
+    margin-bottom: 15px;
     @include flexbox();
     @include flex-direction(column);
   }

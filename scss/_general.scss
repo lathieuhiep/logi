@@ -292,7 +292,9 @@ pre {
 .d-flex {
   &.elementor-column {
     .elementor-widget-wrap {
-      @include flexbox();
+      .elementor-widget {
+        min-height: 100%;
+      }
     }
   }
 }

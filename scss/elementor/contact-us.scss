@@ -1,4 +1,9 @@
 .element-contact-us {
+  .image {
+    img {
+      width: 100%;
+    }
+  }
   .list {
     .item {
       @include flexbox();
@@ -75,9 +80,11 @@
     .list {
       margin: 0 -15px;
       @include flexbox();
+      @include flex-wrap(wrap);
 
       .item {
         padding: 0 15px;
+        margin-bottom: 15px;
         @include flex(0 0 33.333333%);
         max-width: 33.333333%;
         @include align-items(center);

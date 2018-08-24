@@ -22,7 +22,7 @@ class logi_widget_slides extends Widget_Base {
     }
 
     public function get_script_depends() {
-        return ['owl-carousel', 'logi-elementor-custom'];
+        return ['logi-elementor-custom'];
     }
 
     protected function _register_controls() {

@@ -22,10 +22,6 @@ class logi_video_popup extends Widget_Base {
         return 'fa fa-play';
     }
 
-    public function get_script_depends() {
-        return ['lity'];
-    }
-
     protected function _register_controls() {
 
         $this->start_controls_section(
