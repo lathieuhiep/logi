@@ -685,7 +685,7 @@ function logi_option_posts_per_page_taxonomy() {
 function logi_col_use_sidebar( $option_sidebar, $active_sidebar ) {
 
     if ( $option_sidebar != 'hide' && is_active_sidebar( $active_sidebar ) ):
-        $class_col_content = 'col-md-9';
+        $class_col_content = 'col-md-8 col-lg-9';
     else:
         $class_col_content = 'col-md-12';
     endif;
@@ -694,7 +694,7 @@ function logi_col_use_sidebar( $option_sidebar, $active_sidebar ) {
 }
 
 function logi_col_sidebar() {
-    $class_col_sidebar = 'col-md-3';
+    $class_col_sidebar = 'col-12 col-md-4 col-lg-3';
 
     return $class_col_sidebar;
 }

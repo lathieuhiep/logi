@@ -6,7 +6,6 @@
   }
 }
 .element-intro {
-  padding: 70px 0;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,7 +13,9 @@
   .intro-content-box {
     width: 42%;
     margin: 0 0 0 auto;
-    padding: 0 30px;
+    padding: 70px 30px;
+    background-color: #ffffff;
+    min-height: 100%;
   }
   .title {
     margin-bottom: 10px;

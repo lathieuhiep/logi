@@ -254,7 +254,7 @@ class logi_widget_box_text extends Widget_Base {
             <div class="row">
                 <?php foreach ( $settings['list'] as $item ) : ?>
 
-                    <div class="col-12 col-md-6 item">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 item">
                         <a class="link-item" href="<?php echo esc_url( $item['list_link']['url'] ) ?>"></a>
 
                         <figure class="image">

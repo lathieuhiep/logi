@@ -835,7 +835,7 @@ form.post-password-form p input[type='submit'] {
 .site-menu ul li .sub-menu li {
   padding: 0;
   display: block;
-  border: none;
+  border-left: none;
 }
 
 .site-menu ul li .sub-menu li a {
@@ -885,6 +885,7 @@ form.post-password-form p input[type='submit'] {
   width: 12px;
   height: 20px;
   font-size: 14px;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -1848,7 +1849,7 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 .pagination {
   display: block;
   float: none;
-  text-align: right;
+  text-align: center;
 }
 
 .page-numbers {
@@ -2078,6 +2079,7 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 }
 
 .site-product-cat .pagination {
+  text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
   -webkit-box-flex: 1;
@@ -2527,7 +2529,6 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 }
 
 .element-intro {
-  padding: 70px 0;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2536,7 +2537,9 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 .element-intro .intro-content-box {
   width: 42%;
   margin: 0 0 0 auto;
-  padding: 0 30px;
+  padding: 70px 30px;
+  background-color: #ffffff;
+  min-height: 100%;
 }
 
 .element-intro .title {
@@ -2850,6 +2853,7 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 
 .element-video-popup .item {
   padding: 0 2px;
+  margin: 2px 0;
 }
 
 .element-video-popup .video-popup-item {
@@ -2911,7 +2915,7 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 .element-our-services .list-text .list-text__item {
   display: inline-block;
   border-right: 1px solid #ffffff;
-  margin-right: 10px;
+  margin: 0 10px 10px 0;
   padding-right: 10px;
 }
 
@@ -2973,6 +2977,10 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 /* Services */
 .element-services .image-services {
   margin-bottom: 30px;
+}
+
+.element-services .image-services img {
+  width: 100%;
 }
 
 .element-services .title {
@@ -3559,6 +3567,26 @@ form.wpcf7-form .wpcf7-submit:hover {
   }
 }
 
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .element-intro .intro-content-box {
+    width: 55%;
+  }
+  .element-intro-link .element-intro-link__item .item-image {
+    height: 110px;
+  }
+  .element-intro-link .element-intro-link__item .item-image img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .element-our-services .list-box-services .icon-services {
+    width: 70px;
+  }
+  .element-our-services .list-box-services .content-services {
+    padding: 0 30px 0 15px;
+  }
+}
+
 @media (min-width: 992px) {
   .site-menu ul li .sub-menu {
     display: block !important;
@@ -3593,7 +3621,10 @@ form.wpcf7-form .wpcf7-submit:hover {
     display: block;
   }
   .site-menu {
-    text-align: left;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color: #ff3062;
   }
   .site-menu .collapse {
     display: none !important;
@@ -3604,14 +3635,27 @@ form.wpcf7-form .wpcf7-submit:hover {
   .site-menu ul li {
     display: block;
     padding: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .site-menu ul li:first-child {
+    border-left: none;
   }
   .site-menu ul li:last-child {
     border-bottom: 0;
   }
+  .site-menu ul li.current_page_item, .site-menu ul li.current-menu-ancestor {
+    border-color: rgba(255, 255, 255, 0.2);
+    background-color: #f6295b;
+  }
+  .site-menu ul li.current_page_item > a, .site-menu ul li.current-menu-ancestor > a {
+    background-color: transparent;
+  }
   .site-menu ul li a {
     display: inline-block;
-    padding: 15px 0;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #ffffff;
   }
   .site-menu ul li .sub-menu {
     display: none;
@@ -3626,11 +3670,12 @@ form.wpcf7-form .wpcf7-submit:hover {
     transition-duration: 0s;
   }
   .site-menu ul li .sub-menu li {
-    border-bottom: 0;
     padding: 0;
   }
   .site-menu ul li .sub-menu li a {
-    padding: 8px 0;
+    padding: 5px 15px;
+    color: #ffffff;
+    border-bottom: none;
   }
   .site-menu ul li .sub-menu li a:before {
     content: "\f10c";
@@ -3644,8 +3689,33 @@ form.wpcf7-form .wpcf7-submit:hover {
   .site-menu ul li .sub-menu li .icon_menu_item_mobile {
     top: 5px;
   }
+  .site-menu ul li .sub-menu li.lang-item a:before {
+    display: none;
+  }
   .icon_menu_item_mobile {
     display: block;
+  }
+  .element-our-services .list-box-services .item-col:before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    background-color: #723617;
+  }
+  .element-our-services .list-box-services .item:after {
+    display: none;
+  }
+  .site-product-cat .pagination {
+    margin-top: 15px;
+    text-align: left;
+  }
+  .site-footer__menu {
+    text-align: inherit;
+  }
+  .site-footer__menu ul {
+    padding: 0;
   }
 }
 
@@ -3673,22 +3743,63 @@ form.wpcf7-form .wpcf7-submit:hover {
   .recent_posts_thumbs_widget_grid .recent_posts_thumbs_widget_item {
     width: 100%;
   }
+  .element-intro .intro-content-box {
+    width: 50%;
+  }
+  .element-contact-us.contact-us-type1 .list .item {
+    padding: 25px 15px;
+  }
+  .element-contact-us.contact-us-type1 .list .item .custom-padding {
+    padding-left: 28px;
+  }
+  .element-contact-us.contact-us-type1 .list .item .custom-padding.link-email {
+    padding-left: 15px;
+  }
+  section.widget .product-link-widget__content .product-link-widget__item {
+    padding: 10px 25px;
+  }
+  .site-product-list .site-product-list__item .info-product {
+    padding: 25px 10px;
+  }
+  .site-single-product .product-item-info .product-item-link-btn {
+    margin-right: 15px;
+  }
+  .site-single-product .product-item-info .product-item-link-btn a {
+    padding: 15px 25px;
+  }
 }
 
 @media (max-width: 767px) {
   .site-sidebar {
     padding-top: 50px;
   }
-  /* woocommerce */
-  .woocommerce .col2-set .col-1,
-  .woocommerce .col2-set .col-2,
-  .woocommerce-page .col2-set .col-1,
-  .woocommerce-page .col2-set .col-2 {
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    -webkit-box-flex: 0;
-    flex: 0 0 100%;
-    max-width: 100%;
+  .element-intro .intro-content-box {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .element-intro-link .element-intro-link__item .item-image {
+    height: 150px;
+  }
+  .element-intro-link .element-intro-link__item .item-image img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .element-partners .element-partners__content .sub-title {
+    font-size: 30px;
+  }
+  .element-partners .element-partners__content .link-text {
+    padding: 10px 25px;
+  }
+  section.widget:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .element-slides__item .element-slides__item--description {
+    font-size: 35px;
   }
 }
 
@@ -3704,11 +3815,48 @@ form.wpcf7-form .wpcf7-submit:hover {
 }
 
 @media (max-width: 575px) {
+  .site-banner {
+    height: 200px;
+  }
+  .site-banner img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .site-banner .banner-title .banner-title2 {
+    font-size: 35px;
+  }
   .comment-form .comment-fields-row {
     margin-bottom: 0;
   }
   .comment-form .form-comment-item {
+    margin-bottom: 30px;
+  }
+  .element-slides__item .element-slides__item--description {
+    font-size: 28px;
+  }
+  .element-partners .element-partners__content {
     margin-bottom: 15px;
+  }
+  .element-product-cat .item .element-product-cat__content {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+  .element-product-cat .item .element-product-cat__content:after {
+    display: none;
+  }
+  .element-our-services .list-box-services .icon-services {
+    width: 70px;
+  }
+  .element-our-services .list-box-services .content-services {
+    padding: 0 0 0 15px;
+  }
+  .site-single-product .product-item-info .product-item-link-btn {
+    margin: 0 0 15px;
+  }
+  .site-product-related .title {
+    font-size: 20px;
   }
 }
 

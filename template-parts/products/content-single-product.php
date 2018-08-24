@@ -15,13 +15,13 @@ $logi_product_tag = get_the_terms( get_the_ID(), 'product_tag' );
 
             <div class="product-item">
                 <div class="row">
-                    <div class="col-12 col-sm-6 col-md-4">
+                    <div class="col-12 col-md-4">
                         <div class="product-item-image">
                             <?php the_post_thumbnail( array( 360, 360 ) ); ?>
                         </div>
                     </div>
 
-                    <div class="col-12 col-sm-6 col-md-8">
+                    <div class="col-12 col-md-8">
                         <div class="product-item-info">
                             <h1 class="title">
                                 <?php the_title(); ?>
@@ -41,7 +41,7 @@ $logi_product_tag = get_the_terms( get_the_ID(), 'product_tag' );
                                 ?>
                             </div>
 
-                            <div class="product-item-box d-flex">
+                            <div class="product-item-box d-sm-flex">
 
                                 <?php if ( !empty( $logi_product_file_upload ) ) : ?>
 

@@ -297,7 +297,7 @@ class logi_widget_contact_us extends Widget_Base {
 
                                 <?php foreach ( $settings['list_email'] as $item ) : ?>
 
-                                    <div class="link-email__item d-flex">
+                                    <div class="link-email__item d-lg-flex">
                                         <?php if ( !empty( $item['list_title_email'] ) ) : ?>
                                             <span>
                                                 <?php echo esc_html( $item['list_title_email'] ); ?>
@@ -391,7 +391,7 @@ class logi_widget_contact_us extends Widget_Base {
 
                                 <# _.each( settings.list_email, function( item ) { #>
 
-                                    <div class="link-email__item d-flex">
+                                    <div class="link-email__item d-lg-flex">
                                         <# if ( item.list_title_email ) { #>
                                             <span>
                                                 {{{ item.list_title_email }}}

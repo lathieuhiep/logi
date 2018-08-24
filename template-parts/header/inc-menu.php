@@ -7,7 +7,7 @@
 
 <header id="home" class="header">
     <nav id="navigation" class="navbar-expand-lg d-flex">
-        <div class="header-bottom flex-lg-grow-1">
+        <div class="header-bottom flex-grow-1">
             <div class="header-bottom_warp d-lg-flex">
                 <div class="site-logo">
                     <a href="<?php echo esc_url( get_home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">

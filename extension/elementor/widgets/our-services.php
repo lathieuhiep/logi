@@ -367,13 +367,13 @@ class logi_widget_our_services extends Widget_Base {
         $column_number  =   $settings['column_number'];
 
         if ( $column_number == 4 ) :
-            $class_column_number = 'col-md-3';
+            $class_column_number = 'col-lg-3';
         elseif ( $column_number == 3 ) :
-            $class_column_number = 'col-md-4';
+            $class_column_number = 'col-lg-4';
         elseif ( $column_number == 2 ) :
-            $class_column_number = 'col-md-6';
+            $class_column_number = 'col-lg-6';
         else:
-            $class_column_number = 'col-md-12';
+            $class_column_number = 'col-lg-12';
         endif;
 
     ?>
@@ -408,7 +408,7 @@ class logi_widget_our_services extends Widget_Base {
                     <div class="row">
                         <?php foreach ( $settings['list_services'] as $item ) : ?>
 
-                            <div class="col-12 col-sm-6 <?php echo esc_attr( $class_column_number ); ?> item-col d-flex">
+                            <div class="col-12 col-md-12 <?php echo esc_attr( $class_column_number ); ?> item-col d-flex">
                                 <div class="item d-flex">
                                     <div class="icon-services">
                                         <?php echo wp_get_attachment_image( $item['list_image_services']['id'], 'full' ); ?>
@@ -445,13 +445,13 @@ class logi_widget_our_services extends Widget_Base {
         var class_column_number = '';
 
         if ( column_number == 4 ) {
-            class_column_number = 'col-md-3';
+            class_column_number = 'col-lg-3';
         }else if ( column_number == 3 ) {
-            class_column_number = 'col-md-4';
+            class_column_number = 'col-lg-4';
         }else if ( column_number == 2 ) {
-            class_column_number = 'col-md-6';
+            class_column_number = 'col-lg-6';
         }else {
-            class_column_number = 'col-md-12';
+            class_column_number = 'col-lg-12';
         }
         #>
 
@@ -486,7 +486,7 @@ class logi_widget_our_services extends Widget_Base {
                     <div class="row">
                         <# _.each( settings.list_services, function( item ) { #>
 
-                            <div class="col-12 col-sm-6 {{ class_column_number }} item-col d-flex">
+                            <div class="col-12 col-md-12 {{ class_column_number }} item-col d-flex">
                                 <div class="item d-flex">
                                     <div class="icon-services">
                                         <img src="{{ item.list_image_services.url }}">

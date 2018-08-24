@@ -8,16 +8,16 @@ $logi_product_cat_per_row = !empty( $logi_options['logi_product_cat_per_row'] ) 
 $logi_class_col_content = logi_col_use_sidebar( $logi_sidebar_product_cat, 'logi-sidebar-product' );
 
 if ( $logi_product_cat_per_row == 3 ) :
-    $logi_class_col_product_item = 'col-md-4';
+    $logi_class_col_product_item = 'col-lg-4';
 else:
-    $logi_class_col_product_item = 'col-md-3';
+    $logi_class_col_product_item = 'col-lg-3';
 endif;
 
 ?>
 
 <div class="site-container site-product-cat">
     <div class="container">
-        <div class="site-product-cat__header d-flex">
+        <div class="site-product-cat__header d-lg-flex">
             <h2 class="title-product-cat text-uppercase">
                 <?php echo esc_html( $logi_product_cat_object->name ); ?>
             </h2>
@@ -43,7 +43,7 @@ endif;
                                 the_post();
                             ?>
 
-                                <div class="col-12 col-sm-6 <?php echo esc_attr( $logi_class_col_product_item ) ?> item">
+                                <div class="col-12 col-sm-6 md-6 <?php echo esc_attr( $logi_class_col_product_item ) ?> item">
                                     <?php get_template_part( 'template-parts/products/content', 'product-item' ); ?>
                                 </div>
 

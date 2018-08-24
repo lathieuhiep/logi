@@ -43,7 +43,7 @@ if ( !empty( $logi_related_product_cat ) ) :
                         $logi_product_related_query->the_post();
                     ?>
 
-                        <div class="col-12 col-sm-6 col-md-3 item">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 item">
                             <?php get_template_part( 'template-parts/products/content', 'product-item' ); ?>
                         </div>
 
