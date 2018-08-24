@@ -1581,6 +1581,10 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
   margin-bottom: 30px;
 }
 
+.site-blog-post .post-item .site-post-image img {
+  width: 100%;
+}
+
 .site-blog-post .post-item .site-blog-post__content {
   display: -webkit-box;
   display: -moz-box;
@@ -3145,6 +3149,10 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 }
 
 /* Download PDF */
+.element-download-pdf .item-col {
+  margin-bottom: 15px;
+}
+
 .element-download-pdf .item-pdf {
   position: relative;
 }
