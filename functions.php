@@ -653,7 +653,7 @@ function logi_option_posts_per_page_taxonomy() {
 function logi_col_use_sidebar( $option_sidebar, $active_sidebar ) {
 
     if ( $option_sidebar != 'hide' && is_active_sidebar( $active_sidebar ) ):
-        $class_col_content = 'col-12 ol-md-8 col-lg-9';
+        $class_col_content = 'col-12 col-md-8 col-lg-9';
     else:
         $class_col_content = 'col-md-12';
     endif;
@@ -667,3 +667,13 @@ function logi_col_sidebar() {
     return $class_col_sidebar;
 }
 /* End Get col global */
+
+function remove_jquery_migrate( $scripts ) {
+    if ( ! is_admin() && isset( $scripts->registered['jquery'] ) ) {
+        $script = $scripts->registered['jquery'];
+        if ( $script->deps ) {
+            $script->deps = array_diff( $script->deps, array( 'jquery-migrate' ) );
+        }
+    }
+}
+add_action( 'wp_default_scripts', 'remove_jquery_migrate' );

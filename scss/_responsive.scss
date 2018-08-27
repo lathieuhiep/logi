@@ -327,9 +327,9 @@
 
 @media ( max-width: 767px ) {
 
-  .site-sidebar {
-    padding-top: 50px;
-  }
+  //.site-sidebar {
+  //  padding-top: 50px;
+  //}
   .element-intro {
     .intro-content-box {
       width: 100%;
@@ -369,6 +369,17 @@
   .elementor-image {
     img {
       width: 100%;
+    }
+  }
+  .fancybox-slide--iframe {
+    padding: 30px 15px;
+  }
+  .site-single {
+    .site-post-content {
+      .title-post {
+        font-size: 18px;
+        padding-left: 15px;
+      }
     }
   }
 
@@ -516,6 +527,16 @@
 
 @media ( max-width: 480px ) {
 
+  .header {
+    .information {
+      p {
+        strong,
+        a {
+          font-size: 15px;
+        }
+      }
+    }
+  }
   .comments-area {
     .comment-list {
       li {
@@ -533,23 +554,6 @@
         ul {
           &.children {
             padding-left: 10px;
-          }
-        }
-      }
-    }
-  }
-  /* woocommerce */
-  .woocommerce {
-    ul {
-      &.products {
-        &.columns-3,
-        &.columns-4,
-        &.columns-5 {
-          li {
-            &.product {
-              @include flex(0 0 50%);
-              width: 50%;
-            }
           }
         }
       }
