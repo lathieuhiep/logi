@@ -121,6 +121,9 @@ foreach(glob( get_parent_theme_file_path( '/extension/widgets/*.php' ) ) as $log
     require $logi_file_widgets;
 }
 
+/* Require HTML Compression */
+require get_parent_theme_file_path( '/extension/WP-HTML-Compression.php' );
+
 /**
  * Register Sidebar
  */
@@ -178,8 +181,57 @@ function logi_widgets_init() {
 
 }
 
-//Register Back-End script
-add_action('admin_enqueue_scripts', 'logi_register_back_end_scripts');
+// Remove jquery migrate
+add_action( 'wp_default_scripts', 'logi_remove_jquery_migrate' );
+function logi_remove_jquery_migrate( $scripts ) {
+    if ( ! is_admin() && isset( $scripts->registered['jquery'] ) ) {
+        $script = $scripts->registered['jquery'];
+        if ( $script->deps ) {
+            $script->deps = array_diff( $script->deps, array( 'jquery-migrate' ) );
+        }
+    }
+}
+
+// Load jquery script in footer
+add_action( 'init', 'logi_init_scripts'  );
+function logi_init_scripts() {
+
+    if ( !is_admin() ) :
+        wp_deregister_script('jquery');
+
+        // Load the copy of jQuery that comes with WordPress
+        // The last parameter set to TRUE states that it should be loaded
+        // in the footer.
+        wp_register_script( 'jquery', '/wp-includes/js/jquery/jquery.js', false, '', true );
+
+        wp_enqueue_script('jquery');
+    endif;
+
+}
+
+// Check deregister styles
+add_action( 'wp_print_styles', 'logi_deregister_styles', 100 );
+function logi_deregister_styles() {
+    global $post;
+
+    wp_deregister_style('font-awesome');
+
+    if ( ! empty( $post ) && is_a( $post, 'WP_Post' ) ) :
+        $plugin_photo = $post->post_content;
+
+        if ( !has_shortcode( $plugin_photo, 'contact-form-7' ) ) :
+
+            wp_deregister_style( 'contact-form-7' );
+            wp_dequeue_script('contact-form-7');
+
+        endif;
+
+    endif;
+
+}
+
+// Register Back-End script
+add_action( 'admin_enqueue_scripts', 'logi_register_back_end_scripts' );
 
 function logi_register_back_end_scripts(){
 
@@ -189,7 +241,7 @@ function logi_register_back_end_scripts(){
 }
 
 //Register Front-End Styles
-add_action('wp_enqueue_scripts', 'logi_register_front_end');
+add_action( 'wp_enqueue_scripts', 'logi_register_front_end' );
 
 function logi_register_front_end() {
 
@@ -221,7 +273,7 @@ function logi_register_front_end() {
     wp_enqueue_script( 'html5', get_theme_file_uri( '/js/html5.js' ), array(), '3.7.3' );
     wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
-    wp_enqueue_script( 'logi-main-js', get_theme_file_uri( '/js/main.min.js' ), array(), '3.3.5', true );
+    wp_enqueue_script( 'logi-main-js', get_theme_file_uri( '/js/main.min.js' ), array(), '', true );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
@@ -667,13 +719,3 @@ function logi_col_sidebar() {
     return $class_col_sidebar;
 }
 /* End Get col global */
-
-function remove_jquery_migrate( $scripts ) {
-    if ( ! is_admin() && isset( $scripts->registered['jquery'] ) ) {
-        $script = $scripts->registered['jquery'];
-        if ( $script->deps ) {
-            $script->deps = array_diff( $script->deps, array( 'jquery-migrate' ) );
-        }
-    }
-}
-add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
