@@ -277,6 +277,28 @@ Redux::setSection( $logi_opt_name, array(
     )
 ));
 
+//Minify HTML Options
+Redux::setSection( $logi_opt_name, array(
+    'title'             =>  esc_html__( 'Minify HTML', 'logi' ),
+    'id'                =>  'logi_minify_html_option',
+    'customizer_width'  =>  '400px',
+    'subsection'        => true,
+    'fields'            => array(
+
+        array(
+            'id'        =>  'logi_minify_html',
+            'type'      =>  'select',
+            'title'     =>  esc_html__( 'Usage Minify HTML', 'logi' ),
+            'default'   =>  0,
+            'options'   =>  array(
+                0   =>  esc_html__( 'Off', 'logi' ),
+                1   =>  esc_html__( 'On', 'logi' )
+            )
+        ),
+
+    ),
+));
+
 /* End General Options */
 
 /* Start Header Options */
