@@ -1,42 +1,25 @@
-<?php
-while (have_posts()) :
-    the_post();
 
-    $logi_post_type = get_post_type( get_the_ID() );
+<?php
+
+$logi_post_type = get_post_type( get_the_ID() );
+
+if ( $logi_post_type != 'page' ) :
+
+    get_template_part( 'template-parts/archive/content', 'archive-post' );
+
+else:
 
 ?>
-
-    <div id='post-<?php the_ID(); ?>' <?php post_class(); ?>>
-
-        <?php
-
-        if ( $logi_post_type != 'page' ) :
-
-            get_template_part( 'template-parts/post/content','info' );
-
-            logi_post_formats();
-
-        else:
-
-        ?>
-
-            <h2 class="site-post-title">
-                <a href="<?php the_permalink() ?>">
-                    <?php the_title(); ?>
-                </a>
-            </h2>
-
-        <?php endif; ?>
-
+    <div class="site-post-image">
+        <img src="<?php echo esc_url( get_theme_file_uri( '/images/image_page_search.png' ) ) ?>" alt="page">
     </div>
 
+    <h2 class="title-post">
+        <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+            <?php the_title(); ?>
+        </a>
+    </h2>
+
 <?php
-endwhile;
 
-wp_reset_postdata();
-?>
-
-
-
-
-
+endif;

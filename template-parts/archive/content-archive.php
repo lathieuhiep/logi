@@ -57,12 +57,33 @@ $logi_class_col_content = logi_col_use_sidebar( $logi_blog_sidebar_archive, 'log
                 endif;
 
                 if ( have_posts() ) :
+                ?>
 
-                    if ( ! is_search() ):
-                        get_template_part( 'template-parts/archive/content', 'archive-post' );
-                    else:
-                        get_template_part( 'template-parts/search/content', 'search-post' );
-                    endif;
+                    <div class="site-blog-post">
+                        <div class="row">
+                            <?php
+                            while (have_posts()) :
+                            the_post();
+                            ?>
+
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 post-item">
+                                    <?php
+                                        if ( ! is_search() ):
+                                            get_template_part( 'template-parts/archive/content', 'archive-post' );
+                                        else:
+                                            get_template_part( 'template-parts/search/content', 'search-post' );
+                                        endif;
+                                    ?>
+                                </div>
+
+                            <?php
+                            endwhile;
+                            wp_reset_postdata();
+                            ?>
+                        </div>
+                    </div>
+
+                <?php
 
                     logi_pagination();
 
