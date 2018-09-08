@@ -3,9 +3,80 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Text in echo
+#: logi/template-parts/products/content-single-product.php:51
+msgid " Download PDF"
+msgstr ""
+
 #. Text in function
-#: logi/functions.php:511
+#: logi/functions.php:585
+msgid " Previous"
+msgstr ""
+
+#. Text in function
+#: logi/functions.php:585
 msgid "&nbsp;"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/download-pdf.php:1
+#: logi/extension/elementor/widgets/offices.php:1
+#: logi/extension/elementor/widgets/our-services.php:1
+#: logi/extension/elementor/widgets/post-type.php:1
+#: logi/extension/elementor/widgets/video-popup.php:1
+msgid "1 Column"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/recent-post.php:212
+msgid "1ST large post"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/download-pdf.php:1
+#: logi/extension/elementor/widgets/offices.php:1
+#: logi/extension/elementor/widgets/our-services.php:1
+#: logi/extension/elementor/widgets/post-type.php:1
+#: logi/extension/elementor/widgets/video-popup.php:1
+msgid "2 Column"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/download-pdf.php:1
+#: logi/extension/elementor/widgets/offices.php:1
+#: logi/extension/elementor/widgets/our-services.php:1
+#: logi/extension/elementor/widgets/post-type.php:1
+#: logi/extension/elementor/widgets/video-popup.php:1
+msgid "3 Column"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/download-pdf.php:1
+#: logi/extension/elementor/widgets/offices.php:1
+#: logi/extension/elementor/widgets/our-services.php:1
+#: logi/extension/elementor/widgets/post-type.php:1
+#: logi/extension/elementor/widgets/video-popup.php:1
+msgid "4 Column"
+msgstr ""
+
+#. Text in echo
+#: logi/template-parts/header/inc-menu.php:47
+msgid "ADD TO MENU"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/recent-post.php:261
+msgid "ASC"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+msgid "Address"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/recent-post.php:231
+msgid "All Category"
 msgstr ""
 
 #. Text in function
@@ -13,34 +84,285 @@ msgstr ""
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr ""
 
-#. Text in echo
-#: logi/template-parts/inc-breadcrumb.php:4
-msgid "Archives"
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Arrows"
 msgstr ""
 
 #. Text in function
-#: logi/template-parts/post/content-info.php:39
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Arrows Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Arrows Color Hover"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Arrows Size"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/post-type.php:1
+msgid "Ascending"
+msgstr ""
+
+#. Text in function
+#: logi/template-parts/post/content-info.php:34
 msgid "Author:"
 msgstr ""
 
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Autoplay?"
+msgstr ""
+
 #. Text in echo
-#: logi/template-parts/post/content-info.php:131
+#: logi/404.php:39
+msgid "Awww...Don’t Cry"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Background"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Background Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/intro.php:1
+msgid "Background Image"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/box-text.php:1
+#: logi/extension/elementor/widgets/intro-link.php:1
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Background Overlay"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/intro-link.php:1
+msgid "Background Overlay Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/video-popup.php:1
+msgid "Background Video"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/banner.php:1
+msgid "Banner Theme"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/post-type.php:1
+msgid "Basic theme Post Type"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+#: logi/extension/elementor/widgets/heading.php:1
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Border Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Border Radius"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Border Width"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Bottom"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/box-text.php:1
+msgid "Box Text Link"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Button"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/intro.php:1
+msgid "Button Link"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Button Text"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+msgid "CONTACT US"
+msgstr ""
+
+#. Text in echo
+#: logi/template-parts/products/content-single-product.php:62
+msgid "Categories:"
+msgstr ""
+
+#. Text in echo
+#: logi/template-parts/post/content-info.php:87
 msgid "Category: "
 msgstr ""
 
-#. Text in echo
-#: logi/functions.php:313
-msgid "Comment navigation"
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Center"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/box-text.php:1
+msgid "Color 1"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/box-text.php:1
+msgid "Color 2"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/intro-link.php:1
+msgid "Color Content"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/intro.php:1
+msgid "Color Text Link"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/download-pdf.php:1
+#: logi/extension/elementor/widgets/offices.php:1
+#: logi/extension/elementor/widgets/our-services.php:1
+#: logi/extension/elementor/widgets/post-type.php:1
+#: logi/extension/elementor/widgets/video-popup.php:1
+msgid "Column"
+msgstr ""
+
+#. Text in function
+#: logi/comments.php:94
+#: logi/template-parts/post/content-info.php:78
+msgid "Comment"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/post-type.php:1
+msgid "Comment count"
 msgstr ""
 
 #. Text in echo
-#: logi/comments.php:73
+#: logi/functions.php:415
+msgid "Comment navigation"
+msgstr ""
+
+#. Text in function
+#: logi/template-parts/post/content-info.php:78
+msgid "Comments"
+msgstr ""
+
+#. Text in echo
+#: logi/comments.php:89
 msgid "Comments are closed."
 msgstr ""
 
 #. Text in function
-#: logi/template-parts/post/content-info.php:47
-msgid "Comments:"
+#: logi/extension/elementor/widgets/intro-link.php:1
+msgid "Connect with shoppers and keep them coming back."
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+msgid "Contact Us Theme"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/box-text.php:1
+#: logi/extension/elementor/widgets/download-pdf.php:1
+#: logi/extension/elementor/widgets/intro-link.php:1
+#: logi/extension/elementor/widgets/offices.php:1
+#: logi/extension/elementor/widgets/our-services.php:1
+#: logi/extension/elementor/widgets/services.php:1
+#: logi/extension/elementor/widgets/slides.php:1
+#: logi/extension/elementor/widgets/video-popup.php:1
+msgid "Content"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/our-services.php:1
+msgid "Content Services"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/our-services.php:1
+msgid "Content Services Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Content Width"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Custom"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/recent-post.php:265
+msgid "DESC"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/post-type.php:1
+#: logi/extension/widgets/recent-post.php:283
+msgid "Date"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/post-type.php:1
+msgid "Descending"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/box-text.php:1
+#: logi/extension/elementor/widgets/intro.php:1
+#: logi/extension/elementor/widgets/our-services.php:1
+#: logi/extension/elementor/widgets/partners.php:1
+#: logi/extension/elementor/widgets/services.php:1
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Description"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/box-text.php:1
+#: logi/extension/elementor/widgets/intro.php:1
+#: logi/extension/elementor/widgets/our-services.php:1
+#: logi/extension/elementor/widgets/partners.php:1
+#: logi/extension/elementor/widgets/services.php:1
+msgid "Description Color"
 msgstr ""
 
 #. Text in function
@@ -49,58 +371,255 @@ msgid "Dismiss this notice"
 msgstr ""
 
 #. Text in function
-#: logi/functions.php:1
+#: logi/functions.php:585
 msgid "Display footer column 1 on all page."
 msgstr ""
 
 #. Text in function
-#: logi/functions.php:1
+#: logi/functions.php:585
 msgid "Display footer column 2 on all page."
 msgstr ""
 
 #. Text in function
-#: logi/functions.php:1
+#: logi/functions.php:585
 msgid "Display footer column 3 on all page."
 msgstr ""
 
 #. Text in function
-#: logi/functions.php:1
+#: logi/functions.php:585
 msgid "Display footer column 4 on all page."
 msgstr ""
 
 #. Text in function
-#: logi/functions.php:1
+#: logi/functions.php:585
+msgid "Display sidebar on product."
+msgstr ""
+
+#. Text in function
+#: logi/functions.php:585
 msgid "Display sidebar right or left on all page."
 msgstr ""
 
 #. Text in function
-#: logi/template-parts/inc-breadcrumb.php:4
-msgid "Error 404 - Page Not Found"
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Dots"
 msgstr ""
 
 #. Text in function
-#: logi/functions.php:1
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Dots Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Dots Color Hover"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Dots Size"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Dots Slider"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/download-pdf.php:1
+msgid "Download PDF Theme"
+msgstr ""
+
+#. Text in function
+#: logi/functions.php:353
+msgid "Edit "
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+msgid "Email"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/offices.php:1
+msgid "Email 1"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/offices.php:1
+msgid "Email 2"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/offices.php:1
+msgid "Email Address 1"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/offices.php:1
+msgid "Email Address 2"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+msgid "Email List"
+msgstr ""
+
+#. Text in echo
+#: logi/template-parts/banner/inc-banner.php:25
+msgid "Empowering your business"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/intro-link.php:1
+msgid "Enhance clinical performance and improves delivery of care."
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/offices.php:1
+msgid "Fax"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/offices.php:1
+msgid "Fax Number"
+msgstr ""
+
+#. Text in function
+#: logi/functions.php:585
 msgid "Footer 1"
 msgstr ""
 
 #. Text in function
-#: logi/functions.php:1
+#: logi/functions.php:585
 msgid "Footer 2"
 msgstr ""
 
 #. Text in function
-#: logi/functions.php:1
+#: logi/functions.php:585
 msgid "Footer 3"
 msgstr ""
 
 #. Text in function
-#: logi/functions.php:1
+#: logi/functions.php:585
 msgid "Footer 4"
 msgstr ""
 
 #. Text in function
-#: logi/404.php:31
+#: logi/comments.php:94
+msgid "Full Name"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+#: logi/extension/elementor/widgets/services.php:1
+msgid "Global"
+msgstr ""
+
+#. Text in function
+#: logi/404.php:55
+#: logi/404.php:56
 msgid "Go to the Home Page"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/recent-post.php:216
+msgid "Grid post"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/intro-link.php:1
+msgid "HEALTHCARE"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/heading.php:1
+#: logi/extension/elementor/widgets/intro.php:1
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Heading"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/banner.php:1
+msgid "Heading 1"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/banner.php:1
+msgid "Heading 1 Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/banner.php:1
+msgid "Heading 2"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/banner.php:1
+msgid "Heading 2 Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/intro.php:1
+msgid "Heading Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/heading.php:1
+msgid "Heading Theme"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Height"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Height Slides"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/recent-post.php:312
+msgid "Hide post date?"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Horizontal Position"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Hover"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/recent-post.php:279
+msgid "ID"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/banner.php:1
+#: logi/extension/elementor/widgets/box-text.php:1
+#: logi/extension/elementor/widgets/contact-us.php:415
+#: logi/extension/elementor/widgets/download-pdf.php:1
+#: logi/extension/elementor/widgets/intro-link.php:1
+#: logi/extension/elementor/widgets/intro.php:1
+#: logi/extension/elementor/widgets/offices.php:1
+#: logi/extension/elementor/widgets/our-services.php:1
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Image"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/banner.php:1
+msgid "Image Banner"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/services.php:1
+msgid "Image Services"
 msgstr ""
 
 #. Text in function
@@ -118,23 +637,165 @@ msgstr ""
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#. Text in echo
-#: logi/search.php:74
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+#. Text in function
+#: logi/extension/elementor/widgets/intro-link.php:1
+msgid "Intro Link Theme"
 msgstr ""
 
 #. Text in function
-#: logi/functions.php:316
+#: logi/extension/elementor/widgets/intro.php:1
+msgid "Intro Theme"
+msgstr ""
+
+#. Text in echo
+#: logi/template-parts/search/content-search-no-data.php:25
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#. Text in echo
+#: logi/404.php:45
+msgid "It's just a 404 Error!"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/intro.php:1
+msgid "KNOW MORE"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/box-text.php:1
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "LEARN MORE"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/intro.php:1
+msgid "LOGICODE"
+msgstr ""
+
+#. Text in function
+#: logi/comments.php:94
+msgid "Leave a comment"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Left"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/box-text.php:1
+#: logi/extension/elementor/widgets/download-pdf.php:1
+#: logi/extension/elementor/widgets/intro-link.php:1
+#: logi/extension/elementor/widgets/partners.php:1
+#: logi/extension/elementor/widgets/slides.php:1
+#: logi/extension/elementor/widgets/video-popup.php:1
+msgid "Link"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/intro.php:1
+msgid "Link Button"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+msgid "Link Email"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Link Partner"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/product-link.php:113
+msgid "Link:"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/recent-post.php:208
+msgid "List"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/download-pdf.php:1
+msgid "List Download PDF"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+msgid "List Phone"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/our-services.php:1
+msgid "List Services"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/our-services.php:1
+msgid "List Text"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/our-services.php:1
+msgid "List Text Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Logo Partner"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Logo Partner List"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Logo Partners"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Loop Slider ?"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/box-text.php:1
+msgid "MOBILITY"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Middle"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Navigation"
+msgstr ""
+
+#. Text in function
+#: logi/functions.php:418
 msgid "Newer Comments"
 msgstr ""
 
 #. Text in function
-#: logi/functions.php:511
+#: logi/functions.php:585
 msgid "Next"
 msgstr ""
 
+#. Text in function
+#: logi/extension/elementor/widgets/intro-link.php:1
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "No"
+msgstr ""
+
 #. Text in echo
-#: logi/search.php:52
+#: logi/template-parts/search/content-search-no-data.php:3
 msgid "No Data"
 msgstr ""
 
@@ -144,15 +805,112 @@ msgid "No action taken. Plugin %1$s was already active."
 msgstr ""
 
 #. Text in function
-#: logi/functions.php:316
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Normal"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/social-widget.php:78
+msgid "Note: Set your social links in the logi Options"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+msgid "Number Phone"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/post-type.php:1
+msgid "Number of Posts"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/recent-post.php:300
+msgid "Number of posts to show:"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/offices.php:1
+msgid "Offices Theme"
+msgstr ""
+
+#. Text in function
+#: logi/functions.php:418
 msgid "Older Comments"
 msgstr ""
 
 #. Text in function
-#: logi/page.php:10
-#: logi/template-parts/post/content-info.php:82
-#: logi/template-parts/post/content-info.php:131
+#: logi/extension/elementor/widgets/post-type.php:1
+msgid "Order"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/post-type.php:1
+msgid "Order By"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/recent-post.php:274
+msgid "Order:"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Our"
+msgstr ""
+
+#. Text in echo
+#: logi/template-parts/banner/inc-banner.php:39
+msgid "Our Products"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/our-services.php:1
+msgid "Our Services Theme"
+msgstr ""
+
+#. Text in echo
+#: logi/template-parts/banner/inc-banner.php:29
+msgid "Our Solutions"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "PARTNERS"
+msgstr ""
+
+#. Text in function
+#: logi/template-parts/page/content-page-elementor.php:12
+#: logi/template-parts/page/content-page.php:14
+#: logi/template-parts/post/content-info.php:78
+#: logi/template-parts/post/content-info.php:147
+#: logi/template-parts/products/content-single-product.php:31
 msgid "Pages:"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Partner"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Partner 1"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Partner 2"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Partners Theme"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+msgid "Phone"
 msgstr ""
 
 #. Text in function
@@ -170,24 +928,72 @@ msgstr ""
 msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
 msgstr ""
 
+#. Text in function
+#: logi/extension/elementor/widgets/post-type.php:1
+msgid "Post"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/post-type.php:1
+msgid "Post Author"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/post-type.php:1
+msgid "Post ID"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/post-type.php:1
+msgid "Post Type"
+msgstr ""
+
 #. Text in echo
-#: logi/template-parts/post/content-info.php:43
+#: logi/template-parts/post/content-info.php:41
 msgid "Post date: "
 msgstr ""
 
-#. Text in function
-#: logi/functions.php:511
-msgid "Previous"
+#. Text in echo
+#: logi/template-parts/products/inc-related-product.php:34
+msgid "RELATED PRODUCTS"
 msgstr ""
 
 #. Text in function
-#: logi/template-parts/post/content-info.php:129
+#: logi/extension/elementor/widgets/intro-link.php:1
+msgid "RETAIL"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/recent-post.php:291
+msgid "Rand"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/post-type.php:1
+msgid "Random"
+msgstr ""
+
+#. Text in echo
+#: logi/template-parts/archive/content-archive-post.php:22
+msgid "Read More"
+msgstr ""
+
+#. Text in function
+#: logi/template-parts/post/content-info.php:144
 msgid "Read more"
 msgstr ""
 
 #. Text in function
-#: logi/search.php:60
+#: logi/template-parts/search/content-search-no-data.php:11
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/box-text.php:1
+#: logi/extension/elementor/widgets/intro-link.php:1
+#: logi/extension/elementor/widgets/offices.php:1
+#: logi/extension/elementor/widgets/video-popup.php:1
+msgid "Repeater List"
 msgstr ""
 
 #. Text in function
@@ -200,14 +1006,84 @@ msgstr ""
 msgid "Return to the Dashboard"
 msgstr ""
 
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Right"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/post-type.php:1
+msgid "Select Category Post"
+msgstr ""
+
 #. Text in echo
-#: logi/template-parts/post/content-info.php:102
+#: logi/extension/widgets/recent-post.php:225
+msgid "Select Category:"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/our-services.php:1
+msgid "Services"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/services.php:1
+msgid "Services Theme"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Set custom style that will only affect this specific slide."
+msgstr ""
+
+#. Text in echo
+#: logi/template-parts/post/content-info.php:100
 msgid "Share this post:"
 msgstr ""
 
 #. Text in function
-#: logi/functions.php:1
+#: logi/functions.php:585
 msgid "Sidebar"
+msgstr ""
+
+#. Text in function
+#: logi/functions.php:585
+msgid "Sidebar Product"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Slide Heading"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Slider 1 Heading"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Slider 2 Heading"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Slider Options"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Slides"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Slides Theme"
+msgstr ""
+
+#. Text in echo
+#: logi/template-parts/banner/inc-banner.php:35
+msgid "Smart Innovation"
 msgstr ""
 
 #. Text in function
@@ -216,13 +1092,113 @@ msgid "Something went wrong with the plugin API."
 msgstr ""
 
 #. Text in echo
-#: logi/search.php:66
+#: logi/template-parts/search/content-search-no-data.php:17
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Spacing"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Style"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/intro.php:1
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Sub Heading"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/intro.php:1
+msgid "Sub Heading Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/offices.php:1
+#: logi/extension/elementor/widgets/our-services.php:1
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Sub Title"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/our-services.php:1
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Sub Title Color"
+msgstr ""
+
 #. Text in echo
-#: logi/template-parts/post/content-info.php:91
+#: logi/template-parts/products/content-single-product.php:78
+msgid "TAG:"
+msgstr ""
+
+#. Text in echo
+#: logi/template-parts/post/content-info.php:87
 msgid "Tag: "
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/offices.php:1
+msgid "Tel"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/offices.php:1
+msgid "Tel Number"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/banner.php:1
+#: logi/extension/elementor/widgets/download-pdf.php:1
+#: logi/extension/elementor/widgets/intro.php:1
+#: logi/extension/elementor/widgets/our-services.php:1
+msgid "Text"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Text Align"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Text Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Text Color Hover"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/box-text.php:1
+#: logi/extension/elementor/widgets/intro.php:1
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Text Link"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/box-text.php:1
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Text Link Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Text Link Hover Background"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Text Link Hover Color"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/product-link.php:105
+msgid "Text Link:"
 msgstr ""
 
 #. Text in function
@@ -241,6 +1217,113 @@ msgid "This plugin needs to be updated to be compatible with your theme."
 msgstr ""
 
 #. Text in function
+#: logi/extension/elementor/widgets/box-text.php:1
+#: logi/extension/elementor/widgets/contact-us.php:415
+#: logi/extension/elementor/widgets/download-pdf.php:1
+#: logi/extension/elementor/widgets/heading.php:1
+#: logi/extension/elementor/widgets/intro-link.php:1
+#: logi/extension/elementor/widgets/offices.php:1
+#: logi/extension/elementor/widgets/our-services.php:1
+#: logi/extension/elementor/widgets/partners.php:1
+#: logi/extension/elementor/widgets/post-type.php:1
+#: logi/extension/elementor/widgets/services.php:1
+#: logi/extension/elementor/widgets/slides.php:1
+#: logi/extension/elementor/widgets/video-popup.php:1
+#: logi/extension/widgets/recent-post.php:287
+msgid "Title"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Title & Description"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/box-text.php:1
+#: logi/extension/elementor/widgets/contact-us.php:415
+#: logi/extension/elementor/widgets/heading.php:1
+#: logi/extension/elementor/widgets/intro-link.php:1
+#: logi/extension/elementor/widgets/our-services.php:1
+#: logi/extension/elementor/widgets/partners.php:1
+#: logi/extension/elementor/widgets/services.php:1
+msgid "Title Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+msgid "Title Email"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/services.php:1
+msgid "Title Line Color"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/offices.php:1
+msgid "Title Offices"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "Title Partner"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/our-services.php:1
+msgid "Title Service"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/our-services.php:1
+msgid "Title Services"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/our-services.php:1
+msgid "Title Services Color"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/product-link.php:83
+#: logi/extension/widgets/recent-post.php:192
+#: logi/extension/widgets/social-widget.php:71
+msgid "Title:"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Top"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+#: logi/extension/elementor/widgets/services.php:1
+msgid "Type 1"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+#: logi/extension/elementor/widgets/services.php:1
+msgid "Type 2"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+msgid "Type Contact Us"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/services.php:1
+msgid "Type Service"
+msgstr ""
+
+#. Text in echo
+#: logi/extension/widgets/recent-post.php:202
+msgid "Type post:"
+msgstr ""
+
+#. Text in function
 #: logi/plugins/class-tgm-plugin-activation.php:1
 msgid "Update Required"
 msgstr ""
@@ -251,12 +1334,79 @@ msgid "Updating Plugin: %s"
 msgstr ""
 
 #. Text in function
-#: logi/template-parts/post/content-info.php:51
-msgid "Views: "
+#: logi/extension/elementor/widgets/partners.php:1
+msgid "VIEW MORE"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Vertical Position"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/video-popup.php:1
+msgid "Video Popup Theme"
 msgstr ""
 
 #. Text in echo
-#: logi/template-parts/inc-loading.php:15
-#: logi/template-parts/inc-loading.php:19
+#: logi/template-parts/products/content-product-item.php:30
+msgid "View Product"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/our-services.php:1
+msgid "WARRANTY SUPPORT"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/intro.php:1
+msgid "WELCOME TO"
+msgstr ""
+
+#. Text in echo
+#: logi/404.php:47
+msgid "What you’re looking for may have been misplaced"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/intro-link.php:1
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "Yes"
+msgstr ""
+
+#. Text in function
+#: logi/comments.php:94
+msgid "Your Email"
+msgstr ""
+
+#. Text in echo
+#: logi/functions.php:340
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "background Color Hover"
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/contact-us.php:415
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "https://your-link.com"
+msgstr ""
+
+#. Text in echo
+#: logi/404.php:49
+msgid "in Long Term Memory."
+msgstr ""
+
+#. Text in echo
+#: logi/template-parts/inc-loading.php:16
+#: logi/template-parts/inc-loading.php:20
 msgid "loading..."
+msgstr ""
+
+#. Text in function
+#: logi/extension/elementor/widgets/slides.php:1
+msgid "nav Slider"
 msgstr ""
