@@ -23,6 +23,10 @@ get_template_part('template-parts/header/inc','menu');
 ?>
 <!--End Loading Template-->
 
+<div class="social-global social-network-toTopFromBottom">
+    <?php logi_get_social_url(); ?>
+</div>
+
 <div id="back-top">
     <a href="#">
         <i class="fa fa-angle-up" aria-hidden="true"></i>
