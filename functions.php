@@ -528,6 +528,13 @@ function logi_register_required_plugins() {
             'required'  =>  true,
         ),
 
+        // This is an example of how to include a plugin from the WordPress Plugin Repository
+        array(
+            'name'      =>  'Polylang',
+            'slug'      =>  'polylang',
+            'required'  =>  true,
+        ),
+
     );
 
     /**
