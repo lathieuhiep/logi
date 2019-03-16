@@ -9,6 +9,14 @@
   .video-popup-item {
     position: relative;
 
+    &:before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
     .image-item {
       img {
         width: 100%;

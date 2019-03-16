@@ -2827,6 +2827,15 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
   position: relative;
 }
 
+.element-video-popup .video-popup-item:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 .element-video-popup .video-popup-item .image-item img {
   width: 100%;
 }

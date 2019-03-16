@@ -46,6 +46,18 @@ class logi_video_popup extends Widget_Base {
             ]
         );
 
+        $this->add_control(
+            'background_overlay',
+            [
+                'label' => esc_html__( 'Background Overlay', 'logi' ),
+                'type' => Controls_Manager::COLOR,
+                'default' => 'rgba(0,0,0,0.5)',
+                'selectors' => [
+                    '{{WRAPPER}} .element-video-popup .video-popup-item:before' => 'background-color: {{VALUE}}',
+                ],
+            ]
+        );
+
         $repeater = new Repeater();
 
         $repeater->add_control(
@@ -102,6 +114,69 @@ class logi_video_popup extends Widget_Base {
                     ],
                 ],
                 'title_field' => '{{{ list_title }}}',
+            ]
+        );
+
+        $this->end_controls_section();
+
+        /*STYLE TAB*/
+        $this->start_controls_section(
+            'section_style_title',
+            [
+                'label' => esc_html__( 'Title', 'logi' ),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_control(
+            'title_color',
+            [
+                'label'     =>  __( 'Title Color', 'logi' ),
+                'type'      =>  Controls_Manager::COLOR,
+                'selectors' =>  [
+                    '{{WRAPPER}} .element-video-popup .title' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'title_typography',
+                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+                'selector' => '{{WRAPPER}} .element-video-popup .title',
+            ]
+        );
+
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+            'section_style_button',
+            [
+                'label' => esc_html__( 'Button', 'logi' ),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_control(
+            'button_color',
+            [
+                'label'     =>  esc_html__( 'Color', 'logi' ),
+                'type'      =>  Controls_Manager::COLOR,
+                'selectors' =>  [
+                    '{{WRAPPER}} .element-video-popup .link-video' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'button_background_color',
+            [
+                'label'     =>  esc_html__( 'Background Color', 'logi' ),
+                'type'      =>  Controls_Manager::COLOR,
+                'selectors' =>  [
+                    '{{WRAPPER}} .element-video-popup .link-video' => 'background-color: {{VALUE}}',
+                ],
             ]
         );
 
