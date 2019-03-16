@@ -136,18 +136,18 @@ $logi_opt_tabs = array(
     array(
         'id'        =>  'redux-help-tab-1',
         'title'     =>  esc_html__( 'Theme Information 1', 'logi' ),
-        'content'   =>  esc_html__( '<p>This is the tab content, HTML is allowed.</p>', 'logi' )
+        'content'   =>  esc_html__( 'This is the tab content, HTML is allowed.', 'logi' )
     ),
     array(
         'id'        =>  'redux-help-tab-2',
         'title'     =>  esc_html__( 'Theme Information 2', 'logi' ),
-        'content'   =>  esc_html__( '<p>This is the tab content, HTML is allowed.</p>', 'logi' )
+        'content'   =>  esc_html__( 'This is the tab content, HTML is allowed.', 'logi' )
     )
 );
 Redux::setHelpTab( $logi_opt_name, $logi_opt_tabs );
 
 // Set the help sidebar
-$logi_opt_content = esc_html__( '<p>This is the sidebar content, HTML is allowed.</p>', 'logi' );
+$logi_opt_content = esc_html__( 'This is the sidebar content, HTML is allowed.', 'logi' );
 Redux::setHelpSidebar( $logi_opt_name, $logi_opt_content );
 
 

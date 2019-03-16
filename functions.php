@@ -383,7 +383,7 @@ if ( ! function_exists( 'logi_fonts_url' ) ) :
             $logi_font_families = array();
 
             if ( 'off' !== $logi_font_google ) {
-                $logi_font_families[] = 'Roboto Condensed:400,700';
+                $logi_font_families[] = 'Roboto:400,500,700';
             }
 
             $logi_query_args = array(
